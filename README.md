@@ -68,24 +68,21 @@ Screen for creating new tickets by picking products from menu.
   
 | Object							| Type		| Description |  
 |:-------------------------|:---------	|:--------- |  
-| **NAVBAR\_1**				|	DIV		| Constant element, present on all screens |  
+| **NAVBAR\_1**				|	**DIV**	| **Constant element, present on all screens** |  
 | Work\_online\_CHECKBOX	|	CHECKBOX	| Unchecked by default; when checked, program syncs in real-time with the server; when unchecked, program operates on local db |    
 | SYNCHRONIZE					|	BUTTON	| Active when Work\_online\_CHECKBOX is unchecked; sync manually with the server |  
 | CLOCK							|	DISPLAY	| Show date/time |    
 | HISTORY						|	BUTTON 	| Go to History screen to see closed tickets |  
 | TICKETS\_IN\_PRODUCTION	|	BUTTON	| Go to Tickets in production screen to see created opened tickets |  
 | CREATE\_NEW\_TICKET:		|	BUTTON	| Go to Create new ticket screen (current location so inactive) |  
-| Object							| Type		| Description |  
 |									|				| |  
-| **MENU\_DIV\_1**			|	DIV		| Element specific to Create new ticket screen |  
+| **MENU\_DIV\_1**			|	**DIV**	| **Element specific to Create new ticket screen** |  
 | product_category:			|	BUTTON	| Button with a category name, e.g. 'pizzas', 'overnight services', etc. Picking a category calls requested products to product\_name buttons |  
-| product_name:				|	BUTTON	| Button with a product/service name, e.g. 'pizza margherita', 'replace Macpherson strut', etc. |  
-| Object							| Type		| Description |  
+| product_name:				|	BUTTON	| Button with a product/service name, e.g. 'pizza margherita', 'replace Macpherson strut', etc. |
 |									|				| |  
-| **MENU\_DIV\_2**			|	DIV		| Element specific to Create new ticket screen. Same as MENU_DIV_1. Added here for user's convenience, e.g. when some products are requested frequently, but belong to different categories, e.g. 'pizza margherita' and 'coca-cola', or 'replace Macpherson strut' and 'general tune up' |  
-| Object							| Type		| Description |  
+| **MENU\_DIV\_2**			|	**DIV**	| **Element specific to Create new ticket screen. Same as MENU_DIV_1. Added here for user's convenience, e.g. when some products are requested frequently, but belong to different categories, e.g. 'pizza margherita' and 'coca-cola', or 'replace Macpherson strut' and 'general tune up'** |  
 |									|				| |  
-| **CURRENT\_TICKET\_DIV**	|	DIV		| Element specific to Create new ticket screen |  
+| **CURRENT\_TICKET\_DIV**	|	**DIV**	| **Element specific to Create new ticket screen** |  
 | X								|	BUTTON	| Button for removing adjacent record |  
 | no. product_name			|	DISPLAY	| Shows product_name; appears here when product\_name button in MENU\_DIV\_1 is clicked |  
 | quantity						|	DISPLAY	| Shows ordered quantity, works as follows: n clics on product_name button adds n quantity, m clicks on X button substracts m quantity |  
@@ -98,11 +95,11 @@ Screen for creating new tickets by picking products from menu.
 | HOME_CHECKBOX:				|	CHECKBOX	| Checkbox marked by default, means that no delivery is requested - client is collecting in person |  
 | TICKET\_NUMBER\_FIELD		|	DISPLAY	| Field with non-unique ticket number, reset daily |  
 |									|				| |  
-| **CURRENT_TICKETS_SUMMARY_DIV**	|	DIV	| Element specific to Create new ticket screen |  
+| **CURRENT_TICKETS_SUMMARY_DIV**	|	**DIV**	| **Element specific to Create new ticket screen** |  
 | ticket_no:					|	BUTTON	| Button link to the ticket in Tickets in production screen |  
 | $TOTAL, TAKE TIME, ...	|	DISPLAY	| Field with the ticket summary: $ TOTAL, TAKE TIME (time created), HOME/DELIV (whether colletion is here or with delivery) |  
 |									|				| |  
-| **BOTTOM\_BAR**				|	DIV		| Constant element, present on all screens |  
+| **BOTTOM\_BAR**				|	**DIV**	| **Constant element, present on all screens** |  
 | LOGGED\_IN\_AS				|	DISPLAY	| Field showing who is taking orders |  
 | TOTAL\_TICKETS\_IN\_PRODUCTION	|	DISPLAY	| Field with a number of opened tickets available for review in Tickets in production screen |  
 | TICKETS\_CREATED/CLOSED	|	DISPLAY	| Field showing number of created(with opened)/closed tickets |  
