@@ -63,9 +63,9 @@ Production module is designed for taking orders for goods and services to render
 
 ####Create new ticket screen:
 
-Review with /interface_schemas/production_module/create_new_ticket.png
-Screen for creating new tickets by picking products from menu.
-
+Review with /interface_schemas/production_module/create_new_ticket.png.  
+Screen for creating new tickets by picking products from menu.  
+  
 | Object							| Type		| Description |  
 |:-------------------------|:---------	|:--------- |  
 | **NAVBAR\_1**				|	DIV		| Constant element, present on all screens |  
@@ -75,17 +75,14 @@ Screen for creating new tickets by picking products from menu.
 | HISTORY						|	BUTTON 	| Go to History screen to see closed tickets |  
 | TICKETS\_IN\_PRODUCTION	|	BUTTON	| Go to Tickets in production screen to see created opened tickets |  
 | CREATE\_NEW\_TICKET:		|	BUTTON	| Go to Create new ticket screen (current location so inactive) |  
-___  
 | Object							| Type		| Description |  
 |:-------------------------|:---------	|:--------- |  
 | **MENU\_DIV\_1**			|	DIV		| Element specific to Create new ticket screen |  
 | product_category:			|	BUTTON	| Button with a category name, e.g. 'pizzas', 'overnight services', etc. Picking a category calls requested products to product\_name buttons |  
 | product_name:				|	BUTTON	| Button with a product/service name, e.g. 'pizza margherita', 'replace Macpherson strut', etc. |  
-___
 | Object							| Type		| Description |  
 |:-------------------------|:---------	|:--------- |
-| **MENU\_DIV\_2**			|	DIV		| Element specific to Create new ticket screen. The same as MENU_DIV_1, added here for user's convenience, e.g. when some products are requested frequently, but belong to different categories, e.g. 'pizza margherita' and 'coca-cola', or 'replace Macpherson strut' and 'general tune up' |  
-___  
+| **MENU\_DIV\_2**			|	DIV		| Element specific to Create new ticket screen. Same as MENU_DIV_1. Added here for user's convenience, e.g. when some products are requested frequently, but belong to different categories, e.g. 'pizza margherita' and 'coca-cola', or 'replace Macpherson strut' and 'general tune up' |  
 | Object							| Type		| Description |  
 |:-------------------------|:---------	|:--------- |  
 | **CURRENT\_TICKET\_DIV**	|	DIV		| Element specific to Create new ticket screen |  
@@ -115,9 +112,9 @@ ___
   
 ####Tickets in production screen
 
-Review with /interface_schemas/production_module/tickets_in_production.png
+Review with /interface_schemas/production_module/tickets_in_production.png.  
 Screen for viewing opened orders.  
-Tickets seen here are editable only after double check.
+Tickets seen here are editable only after double check.  
 
 -	NAVBAR\_1:	Constant element, present on all screens  
 --		Work\_online\_CHECKBOX:	Unchecked by default; when checked, program syncs in real-time with the server; when unchecked, program operates on local db  
