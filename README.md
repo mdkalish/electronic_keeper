@@ -66,7 +66,9 @@ Production module is designed for taking orders for goods and services to render
 Review with /interface_schemas/production_module/create_new_ticket.png
 Screen for creating new tickets by picking products from menu.
 
--	NAVBAR\_1:	Constant element, present on all screens  
+| Object			| Type		| Function	|
+| ------------ |:---------:| ---------:|
+| NAVBAR\_1:	|	DIV		| Constant element, present on all screens |  
 --		Work\_online\_CHECKBOX:	Unchecked by default; when checked, program syncs in real-time with the server; when unchecked, program operates on local db  
 --		SYNCHRONIZE button:		Active when Work\_online\_CHECKBOX is unchecked; sync manually with the server  
 --		CLOCK:						Date and time  
@@ -199,14 +201,4 @@ ___
  - Text editor support for some of the most common character encodings: ASCII, ISO-8859, DOS (OEM), EBCDIC, UTF-8, UTF-16  
  - Right to left (RTL) & bidirectional (bidi) support: Right-to-left (RTL), Bi-directional (Bidi)  
   
-Source: [Wikipedia](http://en.wikipedia.org/wiki/Comparison_of_text_editors)
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Comparison_of_text_editors)  
