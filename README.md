@@ -63,10 +63,10 @@ Production module is designed for taking orders for goods and services to render
 
 ####Create new ticket screen:
 
-Review with /interface_schemas/production_module/create_new_ticket.png.  
+Review with `/interface_schemas/production_module/create_new_ticket.png`.  
 Screen for creating new tickets by picking products from menu.  
   
-| Object							| Type		| Description |  
+| OBJECT							| TYPE		| DESCRIPTION |  
 |:-------------------------|:---------	|:--------- |  
 | **NAVBAR\_1**				|	**DIV**	| **Constant element, present on all screens** |  
 | Work\_online\_CHECKBOX	|	CHECKBOX	| Unchecked by default; when checked, program syncs in real-time with the server; when unchecked, program operates on local db |    
@@ -84,19 +84,19 @@ Screen for creating new tickets by picking products from menu.
 |									|				| |  
 | **CURRENT\_TICKET\_DIV**	|	**DIV**	| **Element specific to Create new ticket screen** |  
 | X								|	BUTTON	| Button for removing adjacent record |  
-| no. product_name			|	DISPLAY	| Shows product_name; appears here when product\_name button in MENU\_DIV\_1 is clicked |  
+| no. product\_name			|	DISPLAY	| Shows product_name; appears here when product\_name button in MENU\_DIV\_1 is clicked |  
 | quantity						|	DISPLAY	| Shows ordered quantity, works as follows: n clics on product_name button adds n quantity, m clicks on X button substracts m quantity |  
-| unit\_price:					|	DISPLAY	| Shows product's unit price |  
-| qty\_x\_up:					|	DISPLAY	| Shows value: quantity times unit price |  
-| DATE\_TIME:					|	DISPLAY	| Shows current date/time |  
-| CREATE\_BUTTON:				|	BUTTON	| Button for creating the ticket; on clicking, the ticked with current date/time goes to Tickets in production screen and from there to CURRENT\_TICKETS\_SUMMARY\_DIV, while CURRENT\_TICKET\_DIV gets cleared |  
-| $TOTAL:						|	DISPLAY	| Field with summed up qty_x_up values |  
+| unit\_price					|	DISPLAY	| Shows product's unit price |  
+| qty\_x\_up					|	DISPLAY	| Shows value: quantity times unit price |  
+| DATE\_TIME					|	DISPLAY	| Shows current date/time |  
+| CREATE\_BUTTON				|	BUTTON	| Button for creating the ticket; on clicking, the ticked with current date/time goes to Tickets in production screen and from there to CURRENT\_TICKETS\_SUMMARY\_DIV, while CURRENT\_TICKET\_DIV gets cleared |  
+| $TOTAL							|	DISPLAY	| Field with summed up qty_x_up values |  
 | DELIVERY\_ADDRESS\_FIELD	|	INPUT		| Input field with the delivery address (as everything else loaded from a DB without clients' name - re GIODO) |  
-| HOME_CHECKBOX:				|	CHECKBOX	| Checkbox marked by default, means that no delivery is requested - client is collecting in person |  
+| HOME\_CHECKBOX				|	CHECKBOX	| Checkbox marked by default, means that no delivery is requested - client is collecting in person |  
 | TICKET\_NUMBER\_FIELD		|	DISPLAY	| Field with non-unique ticket number, reset daily |  
 |									|				| |  
-| **CURRENT_TICKETS_SUMMARY_DIV**	|	**DIV**	| **Element specific to Create new ticket screen** |  
-| ticket_no:					|	BUTTON	| Button link to the ticket in Tickets in production screen |  
+| **CURRENT\_TICKETS\_SUMMARY\_DIV**	|	**DIV**	| **Element specific to Create new ticket screen** |  
+| ticket\_no					|	BUTTON	| Button link to the ticket in Tickets in production screen |  
 | $TOTAL, TAKE TIME, ...	|	DISPLAY	| Field with the ticket summary: $ TOTAL, TAKE TIME (time created), HOME/DELIV (whether colletion is here or with delivery) |  
 |									|				| |  
 | **BOTTOM\_BAR**				|	**DIV**	| **Constant element, present on all screens** |  
@@ -109,37 +109,39 @@ ___
   
 ####Tickets in production screen
 
-Review with /interface_schemas/production_module/tickets_in_production.png.  
+Review with `/interface_schemas/production_module/tickets_in_production.png`.  
 Screen for viewing opened orders.  
 Tickets seen here are editable only after double check.  
 
--	NAVBAR\_1:	Constant element, present on all screens  
---		Work\_online\_CHECKBOX:	Unchecked by default; when checked, program syncs in real-time with the server; when unchecked, program operates on local db  
---		SYNCHRONIZE button:		Active when Work\_online\_CHECKBOX is unchecked; sync manually with the server  
---		CLOCK:						Date and time  
---		HISTORY:						Go to History screen to see closed tickets  
---		TICKETS\_IN\_PRODUCTION:	Go to Tickets in production screen to see created opened tickets  
---		CREATE\_NEW\_TICKET:		Go to Create new ticket screen (current location so inactive)  
-  
-- TICKET\_NO\_DIV:	Element specific to Tickets in production screen  
---	no. product_name:				Field with product_name  
--- quantity:						Field with ordered quantity  
---	unit_price:						Field with product's unit price  
---	qty_x_up:						Field with the value: quantity times unit price  
---	EDIT\_TICKET:					Button for editing the ticket, activated by checking EDIT? checkbox  
---	TAKE\_TIME:						Field with the ticket creation date/time  
---	$TOTAL:							Field with summed up qty_x_up values  
--- EDIT?:							Checbox that needs to be checked prior to clicking EDIT\_TICKET button for editing the ticket  
---	DELIVERY\_ADDRESS\_FIELD:		Field with the delivery address  
---	TICKET\_NUMBER\_FIELD			Field with non-unique ticket number, reset daily  
-  
-- UP/DOWN arrows:					Buttons for scrolling the screen (placed on the left and right of the BOTTOM\_BAR)  
-  
-- BOTTOM\_BAR:	Constant element, present on all screens  
---	LOGGED\_IN\_AS:					Field showing who is taking orders  
---	TOTAL\_TICKETS\_IN\_PROD...:	Field with a number of opened tickets available for review in Tickets in production screen  
--- TICKETS\_CREATED/CLOSED:		Field showing number of created(with opened)/closed tickets  
---	DAILY\_TURNOVER:				Field showing the daily $TOTAL  
+| OBJECT							| TYPE		| DESCRIPTION |  
+|:-------------------------|:---------	|:--------- |  
+| **NAVBAR\_1**				|	**DIV**	| **Constant element, present on all screens** |  
+| Work\_online\_CHECKBOX	|	CHECKBOX	| Unchecked by default; when checked, program syncs in real-time with the server; when unchecked, program operates on local db |    
+| SYNCHRONIZE					|	BUTTON	| Active when Work\_online\_CHECKBOX is unchecked; sync manually with the server |  
+| CLOCK							|	DISPLAY	| Show date/time |    
+| HISTORY						|	BUTTON 	| Go to History screen to see closed tickets |  
+| TICKETS\_IN\_PRODUCTION	|	BUTTON	| Go to Tickets in production screen to see created opened tickets |  
+| CREATE\_NEW\_TICKET		|	BUTTON	| Go to Create new ticket screen (current location so inactive) |  
+|									|				| |  
+| **TICKET\_NO\_DIV**		|	**DIV**	| **Element specific to Tickets in production screen** |  
+| no. product\_name			|	DISPLAY	| Shows product_name |  
+| quantity						|	DISPLAY	| Shows ordered quantity |  
+| unit\_price					|	DISPLAY	| Shows product's unit price |  
+| qty\_x\_up					|	DISPLAY	| Shows value: quantity times unit price |  
+| EDIT\_TICKET					|	BUTTON	| Button for editing the ticket, activated by checking EDIT? checkbox |  
+| TAKE\_TIME					|	DISPLAY	| Shows the ticket creation date/time |  
+| $TOTAL							|	DISPLAY	| Shows summed up qty_x_up values |  
+| EDIT?							|	CHECKBOX | Needs to be checked prior to clicking EDIT\_TICKET button for editing the ticket |  
+| DELIVERY\_ADDRESS\_FIELD	|	DISPLAY	| Shows delivery address |  
+| TICKET\_NUMBER\_FIELD		|	DISPLAY	| Shows non-unique ticket number, reset daily |  
+|									|				| |  
+| **UP/DOWN arrows**			|**BUTTON**	|	Buttons for scrolling the screen (placed on the left and right of the BOTTOM\_BAR) |  
+|									|				| |  
+| BOTTOM\_BAR					|	**DIV**	| Constant element, present on all screens |  
+| LOGGED\_IN\_AS				|	DISPLAY	| Shows who is taking orders |  
+| TOTAL\_TICKETS\_IN\_PRODUCDION	| DISPLAY | Field with a number of opened tickets available for review in Tickets in production screen |  
+| TICKETS\_CREATED/CLOSED	|	DISPLAY	| Shows number of created(with opened)/closed tickets |  
+| DAILY\_TURNOVER				|	DISPLAY	| Shows the daily $TOTAL |  
   
 ___  
   
