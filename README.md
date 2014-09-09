@@ -67,7 +67,7 @@ Review with /interface_schemas/production_module/create_new_ticket.png
 Screen for creating new tickets by picking products from menu.
 
 | Object							| Type		| Description |  
-|:-------------------------|:---------:|:---------:|  
+|:-------------------------|:---------	|:--------- |  
 | **NAVBAR\_1**				|	DIV		| Constant element, present on all screens |  
 | Work\_online\_CHECKBOX	|	CHECKBOX	| Unchecked by default; when checked, program syncs in real-time with the server; when unchecked, program operates on local db |    
 | SYNCHRONIZE					|	BUTTON	| Active when Work\_online\_CHECKBOX is unchecked; sync manually with the server |  
@@ -75,29 +75,32 @@ Screen for creating new tickets by picking products from menu.
 | HISTORY						|	BUTTON 	| Go to History screen to see closed tickets |  
 | TICKETS\_IN\_PRODUCTION	|	BUTTON	| Go to Tickets in production screen to see created opened tickets |  
 | CREATE\_NEW\_TICKET:		|	BUTTON	| Go to Create new ticket screen (current location so inactive) |  
-  
+___  
 | Object							| Type		| Description |  
-|:-------------------------|:---------:|:---------:|  
-| **MENU\_DIV\_1**			| DIV			| Element specific to Create new ticket screen |  
-| product_category:			| BUTTON		| Button with a category name, e.g. 'pizzas', 'overnight services', etc. Picking a category calls requested products to product\_name buttons |  
-| product_name:				| BUTTON		| Button with a product/service name, e.g. 'pizza margherita', 'replace Macpherson strut', etc. |  
-
-- MENU\_DIV\_2:	Element specific to Create new ticket screen  
-The same as MENU_DIV_1, added here for user's convenience, e.g. when some products are requested frequently, but belong to different categories, e.g. 'pizza margherita' and 'coca-cola', or 'replace Macpherson strut' and 'general tune up'  
-  
-- CURRENT\_TICKET\_DIV:	Element specific to Create new ticket screen  
---	X:									Button for removing adjacent record  
---	no. product_name:				Field with product_name; appears here when product\_name button in MENU\_DIV\_1 is clicked  
--- quantity:						Field with ordered quantity, works as follows: n clics on product_name button adds n quantity, m clicks on X button substracts m quantity  
---	unit\_price:						Field with product's unit price  
---	qty\_x\_up:						Field with the value: quantity times unit price  
---	DATE\_TIME:						Field with current date/time  
---	CREATE\_BUTTON:					Button for creating the ticket; on clicking, the ticked with current date/time goes to Tickets in production screen and from there to CURRENT\_TICKETS\_SUMMARY\_DIV, while CURRENT\_TICKET\_DIV gets cleared  
---	$TOTAL:							Field with summed up qty_x_up values  
---	DELIVERY\_ADDRESS\_FIELD:		Field with the delivery address (as everything else loaded from a DB without clients' name - re GIODO)   
----	HOME_CHECKBOX:				Checkbox marked by default, means that no delivery is requested - client is collecting in person  
---	TICKET\_NUMBER\_FIELD			Field with non-unique ticket number, reset daily  
-  
+|:-------------------------|:---------	|:--------- |  
+| **MENU\_DIV\_1**			|	DIV		| Element specific to Create new ticket screen |  
+| product_category:			|	BUTTON	| Button with a category name, e.g. 'pizzas', 'overnight services', etc. Picking a category calls requested products to product\_name buttons |  
+| product_name:				|	BUTTON	| Button with a product/service name, e.g. 'pizza margherita', 'replace Macpherson strut', etc. |  
+___
+| Object							| Type		| Description |  
+|:-------------------------|:---------	|:--------- |
+| **MENU\_DIV\_2**			|	DIV		| Element specific to Create new ticket screen. The same as MENU_DIV_1, added here for user's convenience, e.g. when some products are requested frequently, but belong to different categories, e.g. 'pizza margherita' and 'coca-cola', or 'replace Macpherson strut' and 'general tune up' |  
+___  
+| Object							| Type		| Description |  
+|:-------------------------|:---------	|:--------- |  
+| **CURRENT\_TICKET\_DIV**	|	DIV		| Element specific to Create new ticket screen |  
+| X								|	BUTTON	| Button for removing adjacent record |  
+| no. product_name			|	DISPLAY	| Shows product_name; appears here when product\_name button in MENU\_DIV\_1 is clicked |  
+| quantity						|	DISPLAY	| Shows ordered quantity, works as follows: n clics on product_name button adds n quantity, m clicks on X button substracts m quantity |  
+| unit\_price:					|	DISPLAY	| Shows product's unit price |  
+| qty\_x\_up:					|	DISPLAY	| Shows value: quantity times unit price |  
+| DATE\_TIME:					|	DISPLAY	| Shows current date/time |  
+| CREATE\_BUTTON:				|	BUTTON	| Button for creating the ticket; on clicking, the ticked with current date/time goes to Tickets in production screen and from there to CURRENT\_TICKETS\_SUMMARY\_DIV, while CURRENT\_TICKET\_DIV gets cleared |  
+| $TOTAL:						|	DISPLAY	| Field with summed up qty_x_up values |  
+| DELIVERY\_ADDRESS\_FIELD	|	INPUT		| Input field with the delivery address (as everything else loaded from a DB without clients' name - re GIODO) |  
+| HOME_CHECKBOX:				|	CHECKBOX	| Checkbox marked by default, means that no delivery is requested - client is collecting in person |  
+| TICKET\_NUMBER\_FIELD		|	DISPLAY	| Field with non-unique ticket number, reset daily |  
+___  
 - CURRENT_TICKETS_SUMMARY_DIV: 	Element specific to Create new ticket screen
 --	ticket_no:						Button link to the ticket in Tickets in production screen  
 -- $TOTAL, TAKE TIME, ...		Field with the ticket summary: $ TOTAL, TAKE TIME (time created), HOME/DELIV (whether colletion is here or with delivery)  
