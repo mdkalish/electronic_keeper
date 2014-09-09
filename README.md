@@ -76,15 +76,15 @@ Screen for creating new tickets by picking products from menu.
 | TICKETS\_IN\_PRODUCTION	|	BUTTON	| Go to Tickets in production screen to see created opened tickets |  
 | CREATE\_NEW\_TICKET:		|	BUTTON	| Go to Create new ticket screen (current location so inactive) |  
 | Object							| Type		| Description |  
-|:-------------------------|:---------	|:--------- |  
+|									|				| |  
 | **MENU\_DIV\_1**			|	DIV		| Element specific to Create new ticket screen |  
 | product_category:			|	BUTTON	| Button with a category name, e.g. 'pizzas', 'overnight services', etc. Picking a category calls requested products to product\_name buttons |  
 | product_name:				|	BUTTON	| Button with a product/service name, e.g. 'pizza margherita', 'replace Macpherson strut', etc. |  
 | Object							| Type		| Description |  
-|:-------------------------|:---------	|:--------- |
+|									|				| |  
 | **MENU\_DIV\_2**			|	DIV		| Element specific to Create new ticket screen. Same as MENU_DIV_1. Added here for user's convenience, e.g. when some products are requested frequently, but belong to different categories, e.g. 'pizza margherita' and 'coca-cola', or 'replace Macpherson strut' and 'general tune up' |  
 | Object							| Type		| Description |  
-|:-------------------------|:---------	|:--------- |  
+|									|				| |  
 | **CURRENT\_TICKET\_DIV**	|	DIV		| Element specific to Create new ticket screen |  
 | X								|	BUTTON	| Button for removing adjacent record |  
 | no. product_name			|	DISPLAY	| Shows product_name; appears here when product\_name button in MENU\_DIV\_1 is clicked |  
@@ -97,17 +97,17 @@ Screen for creating new tickets by picking products from menu.
 | DELIVERY\_ADDRESS\_FIELD	|	INPUT		| Input field with the delivery address (as everything else loaded from a DB without clients' name - re GIODO) |  
 | HOME_CHECKBOX:				|	CHECKBOX	| Checkbox marked by default, means that no delivery is requested - client is collecting in person |  
 | TICKET\_NUMBER\_FIELD		|	DISPLAY	| Field with non-unique ticket number, reset daily |  
-___  
-- CURRENT_TICKETS_SUMMARY_DIV: 	Element specific to Create new ticket screen
---	ticket_no:						Button link to the ticket in Tickets in production screen  
--- $TOTAL, TAKE TIME, ...		Field with the ticket summary: $ TOTAL, TAKE TIME (time created), HOME/DELIV (whether colletion is here or with delivery)  
-
-- BOTTOM\_BAR:	Constant element, present on all screens  
---	LOGGED\_IN\_AS:					Field showing who is taking orders  
---	TOTAL\_TICKETS\_IN\_PROD...:	Field with a number of opened tickets available for review in Tickets in production screen  
--- TICKETS\_CREATED/CLOSED:		Field showing number of created(with opened)/closed tickets  
---	DAILY\_TURNOVER:				Field showing the daily $TOTAL  
-
+|									|				| |  
+| **CURRENT_TICKETS_SUMMARY_DIV**	|	DIV	| Element specific to Create new ticket screen |  
+| ticket_no:					|	BUTTON	| Button link to the ticket in Tickets in production screen |  
+| $TOTAL, TAKE TIME, ...	|	DISPLAY	| Field with the ticket summary: $ TOTAL, TAKE TIME (time created), HOME/DELIV (whether colletion is here or with delivery) |  
+|									|				| |  
+| **BOTTOM\_BAR**				|	DIV		| Constant element, present on all screens |  
+| LOGGED\_IN\_AS				|	DISPLAY	| Field showing who is taking orders |  
+| TOTAL\_TICKETS\_IN\_PRODUCTION	|	DISPLAY	| Field with a number of opened tickets available for review in Tickets in production screen |  
+| TICKETS\_CREATED/CLOSED	|	DISPLAY	| Field showing number of created(with opened)/closed tickets |  
+| DAILY\_TURNOVER				|	DISPLAY	| Field showing the daily $TOTAL |  
+  
 ___
   
 ####Tickets in production screen
