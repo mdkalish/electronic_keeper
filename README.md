@@ -2,69 +2,33 @@
 
 **Electronic Keeper** (EK) is a tool targeted at small-to-medium enterprises, designed for use by the lowest-rank workers, largely computer-illiterate, therefore intuitive GUI is king.
 
-___
 
-##CONTENTS:
+## Contents
 
-###1.		"Electronic Keeper" specifications :
-  -		Synopsis  
-  -		Description  
-  -		Modules:
-     - Production module:
-     - – Create new ticket screen
-     - – Tickets in production screen
-
-###2.		Collaborators:  
- -		Contributors  
- -		Roles in the project  
- -		Relevant skills by contributor  
- -		Benefits to contributors  
- -		Testing and implementation subjects  
-
-###3. Why Bluefish text editor (.bf)?  
- - Main reasons
- - Other features  
-  
-___
+* [**Modules Description & Mockup**](#modules-description--mockup)  
+  - [Production Module](#production-module)  
+    - [Create New Ticket Screen](#create-new-ticket-screen)  
+    - [Tickets in Production Screen](#tickets-in-production-screen)  
+  - [Online Sales](#more-modules)
+  - [Stock](#more-modules)
+  - [Sales History](#more-modules)
+* [**Collaborators**](#collaborators)
+* [**Requirements**](#requirements)  
   
 
-  
-    
-#1. "Electronic Keeper" specifications.
-Software built solely with freeware tools.
-Used tools:  
- - gliffy.com  
-  
-  
-##Synopsis:  
+## Modules Description & Mockup
 
-"Electronic Keeper" (EK) is a modular tool that helps medium-to-small enterprises run their daily tasks in a transparent and orderly manner. 
+This section describes application functionality.
 
 
-##Description:
-
-EK is targeted at small-to-medium enterprises, designed for use by the lowest-rank workers, largely computer-illiterate, therefore intuitive GUI prepared for touchscreens is king.
-EK is built in modules:
-- production
-- online sales
-- stock
-- sales history
-
-
-##Modules:
-
-Modules can operate independently from one another.
-
-
-###Production module:
+### Production Module
 
 Production module is designed for taking orders for goods and services to render, i.e. kitchen in a restaurant,  counter at mechanics or barbershop, cashier at a store, etc. 
 
 
-####Create new ticket screen:
+####Create new ticket screen
 
-Review with `/interface_schemas/production_module/create_new_ticket.png`.  
-Screen for creating new tickets by picking products from menu.  
+![create_new_ticket.png](https://github.com/mdkalish/electronic_keeper/blob/master/interface_schemas/production_module/create_new_ticket.png "Create new ticket screen")
   
 | OBJECT							| TYPE		| DESCRIPTION |  
 |:-------------------------|:---------	|:--------- |  
@@ -77,14 +41,14 @@ Screen for creating new tickets by picking products from menu.
 | CREATE\_NEW\_TICKET:		|	BUTTON	| Go to Create new ticket screen (current location so inactive) |  
 |									|				| |  
 | **MENU\_DIV\_1**			|	**DIV**	| **Element specific to Create new ticket screen** |  
-| product_category:			|	BUTTON	| Button with a category name, e.g. 'pizzas', 'overnight services', etc. Picking a category calls requested products to product\_name buttons |  
+| product\_category:			|	BUTTON	| Button with a category name, e.g. 'pizzas', 'overnight services', etc. Picking a category calls requested products to product\_name buttons |  
 | product_name:				|	BUTTON	| Button with a product/service name, e.g. 'pizza margherita', 'replace Macpherson strut', etc. |
 |									|				| |  
 | **MENU\_DIV\_2**			|	**DIV**	| **Element specific to Create new ticket screen. Same as MENU_DIV_1. Added here for user's convenience, e.g. when some products are requested frequently, but belong to different categories, e.g. 'pizza margherita' and 'coca-cola', or 'replace Macpherson strut' and 'general tune up'** |  
 |									|				| |  
 | **CURRENT\_TICKET\_DIV**	|	**DIV**	| **Element specific to Create new ticket screen** |  
 | X								|	BUTTON	| Button for removing adjacent record |  
-| no. product\_name			|	DISPLAY	| Shows product_name; appears here when product\_name button in MENU\_DIV\_1 is clicked |  
+| no. product\_name			|	DISPLAY	| Shows product\_name; appears here when product\_name button in MENU\_DIV\_1 is clicked |  
 | quantity						|	DISPLAY	| Shows ordered quantity, works as follows: n clics on product_name button adds n quantity, m clicks on X button substracts m quantity |  
 | unit\_price					|	DISPLAY	| Shows product's unit price |  
 | qty\_x\_up					|	DISPLAY	| Shows value: quantity times unit price |  
@@ -105,13 +69,13 @@ Screen for creating new tickets by picking products from menu.
 | TICKETS\_CREATED/CLOSED	|	DISPLAY	| Field showing number of created(with opened)/closed tickets |  
 | DAILY\_TURNOVER				|	DISPLAY	| Field showing the daily $TOTAL |  
   
-___
   
-####Tickets in production screen
+#### Tickets in production screen
 
-Review with `/interface_schemas/production_module/tickets_in_production.png`.  
 Screen for viewing opened orders.  
-Tickets seen here are editable only after double check.  
+Tickets seen here are editable only after double confirmation.  
+
+![tickets_in_production.png](https://github.com/mdkalish/electronic_keeper/blob/master/interface_schemas/production_module/tickets_in_production.png "Tickets in production screen")
 
 | OBJECT							| TYPE		| DESCRIPTION |  
 |:-------------------------|:---------	|:--------- |  
@@ -129,7 +93,7 @@ Tickets seen here are editable only after double check.
 | unit\_price					|	DISPLAY	| Shows product's unit price |  
 | qty\_x\_up					|	DISPLAY	| Shows value: quantity times unit price |  
 | EDIT\_TICKET					|	BUTTON	| Button for editing the ticket, activated by checking EDIT? checkbox |  
-| TAKE\_TIME					|	DISPLAY	| Shows the ticket creation date/time |  
+| TAKE\_TIME					|	DISPLAY	| Shows how long the ticket is open |  
 | $TOTAL							|	DISPLAY	| Shows summed up qty_x_up values |  
 | EDIT?							|	CHECKBOX | Needs to be checked prior to clicking EDIT\_TICKET button for editing the ticket |  
 | DELIVERY\_ADDRESS\_FIELD	|	DISPLAY	| Shows delivery address |  
@@ -143,63 +107,22 @@ Tickets seen here are editable only after double check.
 | TICKETS\_CREATED/CLOSED	|	DISPLAY	| Shows number of created(with opened)/closed tickets |  
 | DAILY\_TURNOVER				|	DISPLAY	| Shows the daily $TOTAL |  
   
-___  
+
+### More modules  
+Information on modules Online sales, Stock, Sales history, and more will be added later in development stage.  
+
   
-#2. Collaborators:
+## Collaborators  
 
+| NAME  | ROLE  |
+|:------|:------|
+| [mdkalish](https://github.com/mdkalish) | project owner, implementator, manager, dev, learner | 
+| [wunderbart](https://github.com/wunderbart) | code review |
+| [Kuźnia Cafe & Pizza](http://pizzeriakuznia.pl/) | testing and implementation environment |
 
-##Contributors:
-
- - jeltz  
- - mateo  
- - wafcio  
- - wunderbart  
-
-
-##Roles in the project (please propose your engagement yourself):
-
- - jeltz:			tba  
- - mateo:			project owner, implementator, manager, programmist, learner  
- - wafcio:			tba  
- - wunderbart:		professional advisor (RoR, JavaScript, CoffeeScript, CSS, SQL, HTML)  
-
-
-##Relevant skills by contributor (please self-assess):  
-
- - jeltz:  
- - mateo:			RoR beginner; git beginner; Python, SQL, CSS, HTML, JavaScript  - intermediate  
- - wafcio:  
- - wunderbart:		RoR, JavaScript, CoffeeScript, CSS, SQL, HTML professional  
   
+## Requirements
 
-##Benefits to contributors (please propose yourself):
-
- - jeltz:			tba (share of potential revenue?)  
- - mateo:			mainly what I learn; maybe c 20% of potential revenue (tba); printscreens and results from implementation may be used in my Master's thesis (without any code!)  
- - wafcio:			tba (share of potential revenue?)  
- - wunderbart:		tba (share of potential revenue?)  
-
-##Testing and implementation subjects:
+ - While writing in Ruby, please follow the [Community-driven ruby coding style guide](https://github.com/bbatsov/ruby-style-guide)  
+ - [Workflow requirements](https://www.atlassian.com/git/workflows#!workflow-feature-branch)
   
-Befriended subject(s) for testing and implementation:  
-Kuznia cafe & pizza, ul. Orzeska 78, Ornontowice, pizzeriakuznia.pl
-
-___
-  
-#3. Why Bluefish text editor (.bf):
-
-##Meain reasons:  
- - free, GPL, Open source  
- - Cross-platform: Windows, OS X, Linux, BSD, Unix, OpenVMS  
- - Text editor support for newline character sequence support: Windows (CR/LF), Unix (including OS X) (LF), Mac OS (CR)  
-
-###Other features:  
- - docs interface support: Multiple instances, Single document window splitting, MDI: overlappable windows, MDI: tabbed document interface  
- - Text editor support for basic editing features: Spell checking, Regex-based find & replace, Encoding conversion, Newline conversion, Multiple undo/redo, NO: Rectangular block selection  
- - Text editor support for programming features (see source code editor): Syntax highlighting, NO: Function list, Symbol database (ctags or equiv.), Brace matching, Auto indentation, Auto completion, Code folding, NO: Text folding, Compiler integration  
- - Text editor support for other programming features: NO: Text shell integration, Graphical shell integration, ?: Macro language, Collaborative editing, ?: Large file support, ?: Long line support, Multi-line regex support, ?: Search in files  
- - Text editor support for remote file editing over Internet Protocols: FTP, HTTP, SSH, WebDAV  
- - Text editor support for some of the most common character encodings: ASCII, ISO-8859, DOS (OEM), EBCDIC, UTF-8, UTF-16  
- - Right to left (RTL) & bidirectional (bidi) support: Right-to-left (RTL), Bi-directional (Bidi)  
-  
-Source: [Wikipedia](http://en.wikipedia.org/wiki/Comparison_of_text_editors)  
