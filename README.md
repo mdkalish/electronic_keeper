@@ -12,7 +12,6 @@
   - [Online Sales](#more-modules)
   - [Stock](#more-modules)
   - [Sales History](#more-modules)
-* [**Collaborators**](#collaborators)
 * [**Requirements**](#requirements)  
   
 
@@ -111,16 +110,7 @@ Tickets seen here are editable only after double confirmation.
 ### More modules  
 Information on modules Online sales, Stock, Sales history, and more will be added later in development stage.  
 
-  
-## Collaborators  
 
-| NAME  | ROLE  |
-|:------|:------|
-| [mdkalish](https://github.com/mdkalish) | project owner, implementator, manager, dev, learner | 
-| [wunderbart](https://github.com/wunderbart) | code review |
-| [Kuźnia Cafe & Pizza](http://pizzeriakuznia.pl/) | testing and implementation environment |
-
-  
 ## Requirements
 
  - While writing in Ruby, please follow the [Community-driven ruby coding style guide](https://github.com/bbatsov/ruby-style-guide)  
