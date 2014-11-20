@@ -27,7 +27,7 @@ Production module is designed for taking orders for goods and services to render
 
 ####Create new ticket screen
 
-![create_new_ticket.png](https://github.com/mdkalish/electronic_keeper/app/assets/images/interface_schemas/production_module/create_new_ticket.png "Create new ticket screen")
+![create_new_ticket.png](https://raw.githubusercontent.com/mdkalish/electronic_keeper/master/app/assets/images/interface_schemas/production_module/create_new_ticket.png "Create new ticket screen")
 
 | OBJECT							| TYPE		| DESCRIPTION |
 |:-------------------------|:---------	|:--------- |
@@ -74,7 +74,7 @@ Production module is designed for taking orders for goods and services to render
 Screen for viewing opened orders.
 Tickets seen here are editable only after double confirmation.
 
-![tickets_in_production.png](https://github.com/mdkalish/electronic_keeper/app/assets/images/interface_schemas/production_module/tickets_in_production.png "Tickets in production screen")
+![tickets_in_production.png](https://raw.githubusercontent.com/mdkalish/electronic_keeper/master/app/assets/images/interface_schemas/production_module/tickets_in_production.png "Tickets in production screen")
 
 | OBJECT							| TYPE		| DESCRIPTION |
 |:-------------------------|:---------	|:--------- |
