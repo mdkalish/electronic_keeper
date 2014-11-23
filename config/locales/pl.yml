@@ -1,0 +1,11 @@
+pl:
+  all_pizzas: 'Wszystkie pizze'
+  name: 'Nazwa'
+  price: 'Cena'
+  ingredients: 'Składniki'
+  category: 'Kategoria'
+  actions: 'Akcje'
+  show_details: 'Pokaż szczegóły'
+  edit: 'Edytuj'
+  remove: 'Usuń'
+  you_sure: 'Jesteś pewien?'

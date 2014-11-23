@@ -20,4 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  all_pizzas: 'All pizzas'
+  name: 'Name'
+  price: 'Price'
+  ingredients: 'Ingredients'
+  category: 'Category'
+  actions: 'Actions'
+  show_details: 'Show details'
+  edit: 'Edit'
+  remove: 'Remove'
+  you_sure: 'You sure?'
+
