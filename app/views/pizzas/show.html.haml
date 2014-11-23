@@ -1,0 +1,7 @@
+= @pizza.inspect
+%br/
+= @pizza.to_yaml
+%br/
+= link_to "Show Pizza", show_a_pizza_path(@pizza.id), :method => :post
+.orders
+  orders:

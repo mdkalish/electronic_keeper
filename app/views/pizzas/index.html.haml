@@ -1,0 +1,37 @@
+#wrapper
+  #sidebar-wrapper.col-md-1
+    #sidebar
+      .nav.list-group
+        %li
+          %a.list-group-item{:href => "#"}
+            %i.icon-home.icon-1x>
+              Pizzas
+        %li
+          %a.list-group-item{:href => "#"}
+            %i.icon-home.icon-1x>
+              Main Courses
+        %li
+          %a.list-group-item{:href => "#"}
+            %i.icon-home.icon-1x>
+              Fastfood
+        %li
+          %a.list-group-item{:href => "#"}
+            %i.icon-home.icon-1x>
+              Beverages
+        %li
+          %a.list-group-item{:href => "#"}
+            %i.icon-home.icon-1x>
+              Alcohol
+        %li
+          %a.list-group-item{:href => "#"}
+            %i.icon-home.icon-1x>
+              Cigarettes
+.container-fluid
+  .col-lg-5#aligned-elements-box
+    = render @pizzas
+  .col-lg-7
+    = render @pizzas
+
+
+
+

@@ -1,0 +1,4 @@
+/.btn-group{ :role => "group" }
+.btn.btn-default#item-button
+  / = pizza_counter + 1
+  = link_to pizza.name, show_a_pizza_path(pizza.id), :method => :post, :data => {:remote => true}
