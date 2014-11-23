@@ -1,0 +1,16 @@
+.navbar.navbar-default.navbar-fixed-bottom
+  .container
+    .btn-toolbar{ :role => "toolbar" }
+      .btn-group.btn-group-justified{ :role => "group" }
+        .btn-group{ :role => "group" }
+          %button.btn.btn-default
+            = link_to "Logged in as", '#'
+        .btn-group{ :role => "group" }
+          %button.btn.btn-default
+            = link_to "Total ongoing tickets" ,'#'
+        .btn-group{ :role => "group" }
+          %button.btn.btn-default
+            = link_to "Tickets created / Tickets closed", '#'
+        .btn-group{ :role => "group" }
+          %button.btn.btn-default
+            = link_to "Daily turnover", '#'
