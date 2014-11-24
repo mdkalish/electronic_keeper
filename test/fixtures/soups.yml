@@ -1,0 +1,23 @@
+of_the_day:
+  name: "Zupa dnia"
+  price: <%= BigDecimal.new("5.00") %>
+  ingredients: ""
+  category: "soup"
+
+rosol:
+  name: "Rosół z makaronem"
+  price: <%= BigDecimal.new("5.00") %>
+  ingredients: ""
+  category: "soup"
+
+flaczki:
+  name: "Flaczki wołowe"
+  price: <%= BigDecimal.new("8.00") %>
+  ingredients: ""
+  category: "soup"
+
+zurek:
+  name: "Żurek"
+  price: <%= BigDecimal.new("7.00") %>
+  ingredients: ""
+  category: "soup"
