@@ -1,37 +1,14 @@
 #wrapper
-  #sidebar-wrapper.col-md-1
-    #sidebar
+  #sidebar-wrapper.col-lg-1
+    #sidebar{ :style => "overflow-y: auto;"}
       .nav.list-group
-        %li
-          %a.list-group-item{:href => "#"}
-            %i.icon-home.icon-1x>
-              Pizzas
-        %li
-          %a.list-group-item{:href => "#"}
-            %i.icon-home.icon-1x>
-              Main Courses
-        %li
-          %a.list-group-item{:href => "#"}
-            %i.icon-home.icon-1x>
-              Fastfood
-        %li
-          %a.list-group-item{:href => "#"}
-            %i.icon-home.icon-1x>
-              Beverages
-        %li
-          %a.list-group-item{:href => "#"}
-            %i.icon-home.icon-1x>
-              Alcohol
-        %li
-          %a.list-group-item{:href => "#"}
-            %i.icon-home.icon-1x>
-              Cigarettes
-.container-fluid
-  .col-lg-5#aligned-elements-box
-    = render @pizzas
-  .col-lg-7
-    = render @pizzas
-
-
-
-
+        - icons.each do |icon|
+          = render partial: 'layouts/left_sidebar', locals: { icon: icon }
+  #main-wrapper.col-lg-5
+    #main
+      = render @pizzas
+  #main-wrapper.col-lg-6
+    #current-tickets
+      = render @pizzas
+    #current-tickets
+      = render @pizzas
