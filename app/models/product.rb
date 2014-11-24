@@ -1,4 +1,4 @@
-class Pizza < ActiveRecord::Base
+class Product < ActiveRecord::Base
   validates :price, presence: true
   validates :name, presence: true, uniqueness: { case_sensitive: false }
   before_save :capitalize_name
