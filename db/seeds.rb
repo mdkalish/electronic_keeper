@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 50.times do |n|
-  name  = Faker::Lorem.word
+  name  = "Pizza-#{n+1}"
   price = Faker::Commerce.price
   ingredients = Faker::Lorem.sentence(rand(2..7))
-  Pizza.create!(name: "#{name}-#{n}", price: price,
+  Pizza.create!(name: name, price: price,
                 ingredients: ingredients, category: 'pizza')
 end
