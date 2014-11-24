@@ -1,20 +1,22 @@
-class PizzasController < ApplicationController
+class ProductsController < ApplicationController
 
   def index
-    @pizzas = Pizza.all
+    @products = Product.all
     render layout: 'main'
   end
 
   def show
     # binding.pry
-    @pizza = Pizza.find(params[:id])
+    @product = Product.all.where(category:"salad")
   end
 
-  def show_pizza
-  @pizza = Pizza.find(params[:id])
-  respond_to do |format|
-    format.js
-    end
+  def ongoing_tickets
+    # @ongoing_tickets = Ticket.all.where(!closed?)
+  end
+
+  def add_product_to_ticket
+    # product = Product.find(params[:id])
+
   end
 
 end
