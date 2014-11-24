@@ -1,0 +1,44 @@
+of_the_day:
+  category: "soup"
+  name: "Zupa dnia"
+  price: 5
+  ingredients: ""
+
+rosol:
+  category: "soup"
+  name: "Rosół z makaronem"
+  price: 5
+  ingredients: ""
+
+flaczki:
+  category: "soup"
+  name: "Flaczki wołowe"
+  price: 8
+  ingredients: ""
+
+zurek:
+  category: "soup"
+  name: "Żurek"
+  price: 7
+  ingredients: ""
+
+grecka:
+  category: "salad"
+  name: "Grecka"
+  price: 10
+  small_price: 6
+  ingredients: ""
+
+z_kurczakiem:
+  category: "salad"
+  name: "Z kurczakiem"
+  price: 12
+  small_price: 7
+  ingredients: ""
+
+z_tunczykiem:
+  category: "salad"
+  name: "Z tuńczykiem"
+  price: 12
+  small_price: 7
+  ingredients: ""

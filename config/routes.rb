@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root    'pizzas#index'
-  resources :pizzas
-  post 'show_pizza/:id' => "pizzas#show_pizza", :as => :show_a_pizza
+  root    'products#index'
+  resources :products
+  get 'show_product/:id' => "products#show_product", :as => :show_a_product
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
