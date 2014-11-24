@@ -17,3 +17,6 @@
 
 # Ignore sublime project files:
 /*.sublime-*
+
+# Ignore unprepared images:
+app/assets/images/to_do/
