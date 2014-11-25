@@ -1,5 +1,4 @@
 module ApplicationHelper
-  attr_accessor :icons
 
   def icons
     @icons = []
