@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
+gem 'pusher'
 group :development do
   gem 'spring'
   gem 'better_errors'
