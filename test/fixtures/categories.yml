@@ -1,0 +1,29 @@
+alcohol:
+  name: alcohol
+
+beverage:
+  name: beverage
+
+dessert:
+  name: dessert
+
+fastfood:
+  name: fastfood
+
+main_course:
+  name: main_course
+
+pancake:
+  name: pancake
+
+pizza:
+  name: pizza
+
+salad:
+  name: salad
+
+soup:
+  name: soup
+
+spaghetti:
+  name: spaghetti
