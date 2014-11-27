@@ -24,7 +24,7 @@ zurek:
 
 grecka:
   category_name: salad
-  name: "Grecka"
+  name: "Sałatka Grecka Duża"
   price: 10
   small_price: 6
   ingredients:
@@ -42,3 +42,336 @@ z_tunczykiem:
   price: 12
   small_price: 7
   ingredients:
+
+margherita:
+  category_name: pizza
+  name: Margherita
+  price: 15.5
+  small_price: 12.5
+  ingredients:
+
+studencka:
+  category_name: pizza
+  name: Studencka
+  price: 18
+  small_price:  13.5
+  ingredients:
+
+toska:
+  category_name: pizza
+  name: Toska
+  price: 19.5
+  small_price:  14
+  ingredients:
+
+hawajka:
+  category_name: pizza
+  name: Hawajka
+  price: 21.5
+  small_price:  14.5
+  ingredients:
+
+brokulka:
+  category_name: pizza
+  name: Brokulka
+  price: 20.5
+  small_price: 14.5
+  ingredients:
+
+doremi_salami:
+  category_name: pizza
+  name: "Do-re-mi-salami"
+  price: 21.5
+  small_price:  15.5
+  ingredients:
+
+morska_bryza:
+  category_name: pizza
+  name: "Morska bryza"
+  price: 22.5
+  small_price: 16
+  ingredients:
+
+country:
+  category_name: pizza
+  name: Country
+  price: 22.5
+  small_price:  16
+  ingredients:
+
+kowala:
+  category_name: pizza
+  name: Kowala
+  price: 23
+  small_price: 16
+  ingredients:
+
+jarska:
+  category_name: pizza
+  name: Jarska
+  price: 21.5
+  small_price: 15.5
+  ingredients:
+
+bartolomeo:
+  category_name: pizza
+  name: Bartolomeo
+  price: 22.5
+  small_price: 15.5
+  ingredients:
+
+kaparina:
+  category_name: pizza
+  name: Kaparina
+  price: 22.5
+  small_price: 15.5
+  ingredients:
+
+cztery_sery:
+  category_name: pizza
+  name: "Cztery sery"
+  price: 21.5
+  small_price:  14.5
+  ingredients:
+
+pirat_krzys:
+  category_name: pizza
+  name: "Pirat Krzyś"
+  price: 22.5
+  small_price:  15.5
+  ingredients:
+
+rumcajs:
+  category_name: pizza
+  name: Rumcajs
+  price: 23
+  small_price:  16
+  ingredients:
+
+los_kurczakos:
+  category_name: pizza
+  name: "Los kurczakos"
+  price: 23
+  small_price:  16
+  ingredients:
+
+szpinka:
+  category_name: pizza
+  name: Szpinka
+  price: 21.5
+  small_price:  14.5
+  ingredients:
+
+czochol:
+  category_name: pizza
+  name: Czochol
+  price: 23
+  small_price:  16
+  ingredients:
+
+grecka:
+  category_name: pizza
+  name: Grecka
+  price: 21.5
+  small_price: 14.5
+  ingredients:
+
+pepperoni:
+  category_name: pizza
+  name: Pepperoni
+  price: 23
+  small_price:  16
+  ingredients:
+
+piatka:
+  category_name: pizza
+  name: Piątka
+  price: 23
+  small_price:  16
+  ingredients:
+
+danie_dnia:
+  category_name: main_course
+  name: "Danie dnia"
+  price: 15
+  ingredients:
+
+rolada_wieprzowa:
+  category_name: main_course
+  name: "Rolada wieprzowa"
+  price: 23
+  ingredients:
+
+filet_z_kurczaka:
+  category_name: main_course
+  name: "Filet z kurczaka"
+  price: 17
+  ingredients:
+
+schabowy_po_wiedensku:
+  category_name: main_course
+  name: "Schabowy po wiedeńsku"
+  price: 19
+  ingredients:
+
+schabowy_po_hawajsku:
+  category_name: main_course
+  name: "Schabowy po hawajsku"
+  price: 16
+  ingredients:
+
+golonko_zapiekane:
+  category_name: main_course
+  name: "Golonko zapiekane"
+  price: 25
+  ingredients:
+
+placek_po_wegiersku:
+  category_name: main_course
+  name: "Placek po węgiersku"
+  price: 18
+  ingredients:
+
+camembert_smazony:
+  category_name: main_course
+  name: "Camembert smażony"
+  price: 17
+  ingredients:
+
+barszcz_z_krokietem:
+  category_name: main_course
+  name: "Barszcz z krokietem"
+  price: 9
+  ingredients:
+
+de_volaille:
+  category_name: main_course
+  name: "De Volaille"
+  price: 18
+  ingredients:
+
+placki_ziemniaczane:
+  category_name: main_course
+  name: "Placki ziemniaczane"
+  price: 6
+  ingredients:
+
+mozzarella_smazona:
+  category_name: main_course
+  name: "Mozzarella smażona"
+  price: 17
+  ingredients:
+
+tyskie_gronie_lane:
+  category_name: alcohol
+  name: "Tyskie gronie lane"
+  price: 5
+  small_price: 4
+
+tyskie_gronie_butelka:
+  category_name: alcohol
+  name: "Tyskie gronie butelka"
+  price: 5
+  small_price:
+
+pilsner_urquell:
+  category_name: alcohol
+  name: "Pilsner Urquell"
+  price: 7
+  small_price:
+
+redds:
+  category_name: alcohol
+  name: "Redd's"
+  price: 5
+  small_price:
+
+gingers:
+  category_name: alcohol
+  name: Gingers
+  price: 5
+  small_price:
+
+lech_premium:
+  category_name: alcohol
+  name: "Lech Premium"
+  price: 5
+  small_price:
+
+tyskie_klasyczne:
+  category_name: alcohol
+  name: "Tyskie Klasyczne"
+  price: 5
+  small_price:
+
+zubr:
+  category_name: alcohol
+  name: Żubr
+  price: 5
+  small_price:
+
+desperados:
+  category_name: alcohol
+  name: Desperados
+  price: 6.5
+  small_price:
+
+zywiec:
+  category_name: alcohol
+  name: Żywiec
+  price: 6
+  small_price:
+
+karmi:
+  category_name: alcohol
+  name: Karmi
+  price: 5
+  small_price:
+
+raciborskie:
+  category_name: alcohol
+  name: Raciborskie
+  price: 6
+  small_price:
+
+raciborskie_miodowe:
+  category_name: alcohol
+  name: "Raciborskie Miodowe"
+  price: 6.5
+  small_price:
+
+zloty_bazant:
+  category_name: alcohol
+  name: "Złoty Bażant"
+  price: 7
+  small_price:
+
+piwo_grzane:
+  category_name: alcohol
+  name: "Piwo grzane"
+  price: 7
+  small_price:
+
+lech_free:
+  category_name: alcohol
+  name: "Lech Free"
+  price: 4
+  small_price:
+
+lampka_wina:
+  category_name: alcohol
+  name: "Lampka wina"
+  price: 7
+  small_price:
+
+grzaniec:
+  category_name: alcohol
+  name: "Grzaniec"
+  price: 10
+  small_price:
+
+butelka_wina:
+  category_name: alcohol
+  name: "Butelka wina"
+  price: 25
+  small_price:
