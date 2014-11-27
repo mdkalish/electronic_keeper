@@ -2,13 +2,17 @@
   #sidebar-wrapper.col-lg-1
     #sidebar{ :style => "overflow-y: auto;"}
       .nav.list-group
-        - icons.each do |icon|
-          = render partial: 'layouts/left_sidebar', locals: { icon: icon }
+        = render 'layouts/left_sidebar'
   #main-wrapper.col-lg-5
     #main
-      = render @products
+      = render plain: "Wybierz kategorię z menu po lewej stronie"
   #main-wrapper.col-lg-6
-    #current-tickets
-      = render @products
-    #current-tickets
+    .current-tickets
+      %h3= "Current ticket"
+      %table.table.table-hover.table-bordered#current-ticket
+        %th.col-lg-1= "Usuń"
+        %th.col-lg-5= "Produkt"
+        %th.col-lg-2= "Cena za szt."
+        %th.col-lg-2= "Ilość"
+    .current-tickets
       = render @products

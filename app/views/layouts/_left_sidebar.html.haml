@@ -1,2 +1,20 @@
 %li.col-lg-12.btn.btn-default
-  = link_to image_tag(icon, alt: File.basename(icon, ".png").humanize), '#'
+  = link_to image_tag(icon_for("pizzas")), show_category_path(category_name: "pizza"), remote: true
+%li.col-lg-12.btn.btn-default
+  = link_to image_tag(icon_for("main_courses")), show_category_path(category_name: "main_course"), remote: true
+%li.col-lg-12.btn.btn-default
+  = link_to image_tag(icon_for("alcohols")), show_category_path(category_name: "alcohol"), remote: true
+%li.col-lg-12.btn.btn-default
+  = link_to image_tag(icon_for("beverages")), show_category_path(category_name: "beverage"), remote: true
+%li.col-lg-12.btn.btn-default
+  = link_to image_tag(icon_for("fastfoods")), show_category_path(category_name: "fastboof"), remote: true
+%li.col-lg-12.btn.btn-default
+  = link_to image_tag(icon_for("soups")), show_category_path(category_name: "soup"), remote: true
+%li.col-lg-12.btn.btn-default
+  = link_to image_tag(icon_for("salads")), show_category_path(category_name: "salad"), remote: true
+%li.col-lg-12.btn.btn-default
+  = link_to image_tag(icon_for("pancakes")), show_category_path(category_name: "pancake"), remote: true
+%li.col-lg-12.btn.btn-default
+  = link_to image_tag(icon_for("spaghettis")), show_category_path(category_name: "spaghetti"), remote: true
+%li.col-lg-12.btn.btn-default
+  = link_to image_tag(icon_for("desserts")), show_category_path(category_name: "dessert"), remote: true
