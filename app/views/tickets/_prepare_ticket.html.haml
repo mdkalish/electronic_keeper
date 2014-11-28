@@ -1,0 +1,13 @@
+%tr
+  %td
+    = link_to image_tag("remove.png", size: '35x35'), remove_product_from_ticket_path(@product), remote: true
+  - if params[:size]
+    %td
+      = "#{@product.name} mała"
+    %td#price
+      = convert_to_pln(@product.small_price)
+  - else
+    %td
+      = @product.name
+    %td#price
+      = convert_to_pln(@product.price)
