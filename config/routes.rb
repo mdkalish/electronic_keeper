@@ -2,8 +2,15 @@ Rails.application.routes.draw do
   root    'products#index'
   resources :products
   get '/show_product/:id' => "products#show", :as => :show_a_product
-  get '/add_product/:id(/:size)' => "tickets#show", :as => :add_to_ticket
+  get '/add_product/:id(/:size)' => "tickets#prepare", :as => :add_to_ticket
   get '/show_category/:category_name' => 'categories#show', :as => :show_category
+  delete '/remove_product(/:id)' => "tickets#remove_product_from_ticket",
+    :as => :remove_product_from_ticket
+
+  # YOU NEED TO DO SCOPE HERE: /ticket/:id/remove_product/:id
+
+
+
   # get ''
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
