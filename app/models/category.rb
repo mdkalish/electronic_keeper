@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  has_many :products
+  has_many :products, as: :product_holder
   CATEGORIES = %w(salad pizza main_course alcohol beverage fastfood soup pancake spaghetti dessert)
 
   # def load_icons
