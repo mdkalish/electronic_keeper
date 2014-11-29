@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141129152550) do
+ActiveRecord::Schema.define(version: 20141129183614) do
 
   create_table "categories", force: true do |t|
     t.string "name"
   end
+
+  add_index "categories", ["name"], name: "index_categories_on_name", unique: true
 
   create_table "products", force: true do |t|
     t.string  "category_name"
@@ -27,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141129152550) do
     t.string  "product_holder_type"
   end
 
+  add_index "products", ["name"], name: "index_products_on_name", unique: true
   add_index "products", ["product_holder_id", "product_holder_type"], name: "index_products_on_product_holder_id_and_product_holder_type"
 
   create_table "tickets", force: true do |t|

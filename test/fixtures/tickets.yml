@@ -1,6 +1,4 @@
 ticket_01:
-  products_ids: "532924416, 644663083, 986432310"
-  products: <% Product.find([532924416, 644663083, 986432310]).to_s %>
   total_price: 31.5
   items_count: 3
   alcohol: true
