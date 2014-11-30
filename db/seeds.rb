@@ -35,16 +35,16 @@ def contains_alcohol?(products)
   products.map(&:category_name).include?("alcohol")
 end
 
-10.times do |n|
-  products_ids = return_random_products_ids(rand(3..6))
-  products = return_random_products(products_ids)
-  Ticket.create!(total_price:      calculate_total_price_for(products),
-                 items_count:      products.count,
-                 alcohol:          contains_alcohol?(products),
-                 to_be_served_at:  1.day.from_now,
-                 delivery_address: "Addres no #{1+n}",
-                 created_by:       "Bożena",
-                 ordered_by:       "Krzysztof",
-                 status:           "open",
-                 created_at:       Time.now)
-end
+# 10.times do |n|
+#   products_ids = return_random_products_ids(rand(3..6))
+#   products = return_random_products(products_ids)
+#   Ticket.create!(total_price:      calculate_total_price_for(products),
+#                  items_count:      products.count,
+#                  alcohol:          contains_alcohol?(products),
+#                  to_be_served_at:  1.day.from_now,
+#                  delivery_address: "Addres no #{1+n}",
+#                  created_by:       "Bożena",
+#                  ordered_by:       "Krzysztof",
+#                  status:           "open",
+#                  created_at:       Time.now)
+# end
