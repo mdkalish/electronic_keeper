@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141129183614) do
+ActiveRecord::Schema.define(version: 20141129225334) do
 
   create_table "categories", force: true do |t|
     t.string "name"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20141129183614) do
   add_index "products", ["product_holder_id", "product_holder_type"], name: "index_products_on_product_holder_id_and_product_holder_type"
 
   create_table "tickets", force: true do |t|
-    t.decimal  "total_price"
-    t.integer  "items_count"
-    t.boolean  "alcohol"
+    t.decimal  "total_price",      default: 0.0
+    t.integer  "items_count",      default: 0
+    t.boolean  "alcohol",          default: true
     t.datetime "to_be_served_at"
     t.string   "delivery_address"
     t.string   "created_by"

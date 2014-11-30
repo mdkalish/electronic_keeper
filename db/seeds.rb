@@ -8,12 +8,12 @@
 
 # Product.where({ :name => ["Brokułka", "Desperados", "Gingers"] })
 
-10.times do |n|
-  Product.create!(category_name: "Sample category",
-                  name:          "Sample name no #{n+1}",
-                  price:         rand(4..25),
-                  ingredients:   "")
-end
+# 10.times do |n|
+#   Product.create!(category_name: "Sample category",
+#                   name:          "Sample name no #{n+1}",
+#                   price:         rand(4..25),
+#                   ingredients:   "")
+# end
 
 def return_random_products_ids(count)
   @ids = []
