@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141201120626) do
+ActiveRecord::Schema.define(version: 20141201143025) do
 
   create_table "categories", force: true do |t|
     t.string "name"
@@ -32,21 +32,21 @@ ActiveRecord::Schema.define(version: 20141201120626) do
   create_table "ticket_items", force: true do |t|
     t.integer  "product_id"
     t.integer  "ticket_id"
-    t.integer  "amount"
-    t.decimal  "price"
+    t.integer  "amount",     default: 0
+    t.decimal  "price",      default: 0.0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "tickets", force: true do |t|
-    t.decimal  "total_price",      default: 0.0
     t.integer  "items_count",      default: 0
+    t.decimal  "total_price",      default: 0.0
     t.boolean  "alcohol",          default: true
+    t.string   "status",           default: "open"
     t.datetime "to_be_served_at"
     t.string   "delivery_address"
     t.string   "created_by"
     t.string   "ordered_by"
-    t.string   "status",           default: "open"
     t.datetime "created_at"
   end
 
