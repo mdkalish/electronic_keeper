@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Product.where("category_name = ?", params[:category_name])
+    @category = Product.where("category_name = ?", params[:category_name]).to_a.sort_by!{ |item| item.name }
     # binding.pry
     respond_to :js
   end

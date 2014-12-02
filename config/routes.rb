@@ -2,10 +2,9 @@ Rails.application.routes.draw do
   root    'products#index'
   resources :products
   get '/show_product/:id' => "products#show", :as => :show_a_product
-  get '/add_product/:id(/:size)' => "tickets#prepare", :as => :add_to_ticket
+  get '/add_product/:id(/:size)' => "ticket_items#create", :as => :add_to_ticket
   get '/show_category/:category_name' => 'categories#show', :as => :show_category
-  delete '/remove_product(/:id)' => "tickets#remove_product_from_ticket",
-    :as => :remove_product_from_ticket
+  get '/decrease_by_one(/:id)' => "ticket_items#decrease_by_one", :as => :decrease_by_one
 
   # YOU NEED TO DO SCOPE HERE: /ticket/:id/remove_product/:id
 

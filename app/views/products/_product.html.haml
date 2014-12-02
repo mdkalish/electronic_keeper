@@ -1,5 +1,0 @@
-.col-lg-6.btn.btn-default#item-button
-  = link_to button_label_for(product, product.price), add_to_ticket_path(product), remote: true
-- if product.small_price
-  .col-lg-6.btn.btn-default#item-button
-    = link_to "Mała #{button_label_for(product, product.small_price)}", add_to_ticket_path(product.id, size = :small), remote: true

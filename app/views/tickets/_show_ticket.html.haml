@@ -1,0 +1,19 @@
+%table.table.table-hover.table-bordered
+  %th.col-lg-1= "Usuń"
+  %th.col-lg-5= "Produkt"
+  %th.col-lg-2= "Cena za szt."
+  %th.col-lg-2= "Ilość"
+  %th.col-lg-2= "Cena w sumie"
+  %tr
+    - @ticket.ticket_items.reverse.each do |item|
+      %tr
+        %td
+          = link_to image_tag("remove.png", size: '35x35'), add_to_ticket_path(item.product.id, :decrement => true), remote: true
+        %td
+          = item.product.name
+        %td#price
+          = convert_to_pln(item.price / item.amount)
+        %td#amount
+          = item.amount
+        %td#total-price
+          = convert_to_pln(item.price)

@@ -1,4 +1,5 @@
 ticket_01:
+  id: 7865534
   total_price: 31.5
   items_count: 3
   alcohol: true

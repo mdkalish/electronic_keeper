@@ -9,10 +9,6 @@
   #main-wrapper.col-lg-6
     .current-tickets
       %h3= "Current ticket"
-      %table.table.table-hover.table-bordered#current-ticket
-        %th.col-lg-1= "Usuń"
-        %th.col-lg-5= "Produkt"
-        %th.col-lg-2= "Cena za szt."
-        %th.col-lg-2= "Ilość"
+      #current-ticket
     .current-tickets
-      = render @products
+      = render plain: "Div.current-tickets"
