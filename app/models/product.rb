@@ -2,9 +2,8 @@ class Product < ActiveRecord::Base
   has_many :ticket_items
   has_many :tickets, through: :ticket_items
   validates :price, presence: true
-  validates :name, presence: true #, uniqueness: { case_sensitive: false }
+  validates :name, presence: true, uniqueness: { case_sensitive: false }
   validates :category_name, presence: true
-  # belongs_to :product_holder, polymorphic: true
   # before_save :capitalize_name
   # accepts_nested_attributes_for :category
 

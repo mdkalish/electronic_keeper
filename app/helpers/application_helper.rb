@@ -13,8 +13,8 @@ module ApplicationHelper
     "#{product.name} #{convert_to_pln(price)}"
   end
 
-  def ticket_total(product)
-
+  def current_ticket_summary(ticket)
+    "Bieżące zamówienie: #{ticket.count_items} rzeczy za #{convert_to_pln(ticket.calculate_total_price.to_f)}"
   end
 
 end

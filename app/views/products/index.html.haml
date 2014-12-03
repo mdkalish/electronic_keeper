@@ -8,7 +8,9 @@
       = render plain: "Wybierz kategorię z menu po lewej stronie"
   #main-wrapper.col-lg-6
     .current-tickets
-      %h3= "Current ticket"
       #current-ticket
+        = render plain: "Div.current-tickets#current-ticket"
     .current-tickets
-      = render plain: "Div.current-tickets"
+      #current-tickets
+        = render plain: "Div.current-tickets#current-tickets"
+

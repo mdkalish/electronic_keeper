@@ -1,4 +1,6 @@
 class TicketsController < ApplicationController
+  before_filter :initialize_ticket
+
 
   def new
     @ticket = Ticket.new
@@ -13,22 +15,31 @@ class TicketsController < ApplicationController
     @products = @ticket.products
   end
 
-  def prepare
-    @ticket = Ticket.last
-    if @ticket.status != "open"
-      @ticket = Ticket.create!
-    end
-    # binding.pry
-    p '-----------------'
-    p @ticket
-    p '-----------------'
-    @ticket.products<<(Product.find(params[:id]))
-    p '-----------------'
-    p @ticket
-    p '-----------------'
-    # binding.pry
+  def create
+    @ticket = Ticket.find(session[:ticket_id])
+    @ticket.update_attribute(:status, "underway")
+    @ticket.save
+    @tickets = Ticket.where("status = ?", "underway").to_a
+    session.destroy
     respond_to :js
   end
+
+  # def prepare
+  #   @ticket = Ticket.last
+  #   if @ticket.status != "open"
+  #     @ticket = Ticket.create!
+  #   end
+  #   # binding.pry
+  #   p '-----------------'
+  #   p @ticket
+  #   p '-----------------'
+  #   @ticket.products<<(Product.find(params[:id]))
+  #   p '-----------------'
+  #   p @ticket
+  #   p '-----------------'
+  #   # binding.pry
+  #   respond_to :js
+  # end
 
   def remove_product_from_ticket
   end

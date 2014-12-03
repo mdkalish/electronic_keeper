@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get '/show_product/:id' => "products#show", :as => :show_a_product
   get '/add_product/:id(/:size)' => "ticket_items#create", :as => :add_to_ticket
   get '/show_category/:category_name' => 'categories#show', :as => :show_category
-  get '/decrease_by_one(/:id)' => "ticket_items#decrease_by_one", :as => :decrease_by_one
+  get '/decrease_by_one(/:id)' => 'ticket_items#decrease_by_one', :as => :decrease_by_one
+  get '/create_ticket' => 'tickets#create'
 
   # YOU NEED TO DO SCOPE HERE: /ticket/:id/remove_product/:id
 

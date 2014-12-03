@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    binding.pry
+    # binding.pry
     # @product = current_ticket.products.build(product_params)
   end
 
