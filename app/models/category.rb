@@ -1,11 +1,7 @@
 class Category < ActiveRecord::Base
-  has_many :products, as: :product_holder
+  has_many :products
   validates :name, uniqueness: { case_sensitive: false }
-  CATEGORIES = %w(salad pizza main_course alcohol beverage fastfood soup pancake spaghetti dessert)
+  CATEGORIES = %w(pizza main_course alcohol beverage fastfood soup salad pancake spaghetti dessert)
   accepts_nested_attributes_for :products
-
-  def show
-    @category = Product.where(category: params[:category_id])
-  end
 
 end
