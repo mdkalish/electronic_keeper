@@ -1,733 +1,733 @@
 zupa_dnia:
-  category_name: soup
+  category: soup
   name: Zupa dnia
   price: 5
   ingredients:
 
 rosol:
-  category_name: soup
+  category: soup
   name: Rosół z makaronem
   price: 5
   ingredients:
 
 flaczki:
-  category_name: soup
+  category: soup
   name: Flaczki wołowe
   price: 8
   ingredients:
 
 zurek:
-  category_name: soup
+  category: soup
   name: Żurek
   price: 7
   ingredients:
 
 mala_grecka:
-  category_name: salad
+  category: salad
   name: Sałatka grecka mała
   price: 6
   ingredients:
 
 duza_grecka:
-  category_name: salad
+  category: salad
   name: Sałatka grecka duża
   price: 10
   ingredients:
 
 z_kurczakiem_mala:
-  category_name: salad
+  category: salad
   name: Sałatka z kurczakiem mała
   price: 7
   ingredients:
 
 z_kurczakiem_duza:
-  category_name: salad
+  category: salad
   name: Sałatka z kurczakiem duża
   price: 12
   ingredients:
 
 z_tunczykiem_mala:
-  category_name: salad
+  category: salad
   name: Sałatka z tuńczykiem mała
   price: 7
   ingredients:
 
 z_tunczykiem_duza:
-  category_name: salad
+  category: salad
   name: Sałatka z tuńczykiem duża
   price: 12
   ingredients:
 
 margherita:
-  category_name: pizza
+  category: pizza
   name: Margher dużaita
   price: 15.5
   ingredients:
 
 studencka:
-  category_name: pizza
+  category: pizza
   name: Studencka duża
   price: 18
   ingredients:
 
 toska:
-  category_name: pizza
+  category: pizza
   name: Toska duża
   price: 19.5
   ingredients:
 
 hawajka:
-  category_name: pizza
+  category: pizza
   name: Hawajka duża
   price: 21.5
   ingredients:
 
 brokulka:
-  category_name: pizza
+  category: pizza
   name: Brokułka duża
   price: 20.5
   ingredients:
 
 doremi_salami:
-  category_name: pizza
+  category: pizza
   name: Do-re-mi-sala dużami
   price: 21.5
   ingredients:
 
 morska_bryza:
-  category_name: pizza
+  category: pizza
   name: Morska bryza duża
   price: 22.5
   ingredients:
 
 country:
-  category_name: pizza
+  category: pizza
   name: Country duża
   price: 22.5
   ingredients:
 
 kowala:
-  category_name: pizza
+  category: pizza
   name: Kowala duża
   price: 23
   ingredients:
 
 jarska:
-  category_name: pizza
+  category: pizza
   name: Jarska duża
   price: 21.5
   ingredients:
 
 bartolomeo:
-  category_name: pizza
+  category: pizza
   name: Bartolomeo duża
   price: 22.5
   ingredients:
 
 kaparina:
-  category_name: pizza
+  category: pizza
   name: Kaparina duża
   price: 22.5
   ingredients:
 
 cztery_sery:
-  category_name: pizza
+  category: pizza
   name: Cztery sery duża
   price: 21.5
   ingredients:
 
 pirat_krzys:
-  category_name: pizza
+  category: pizza
   name: Pirat Krzyś duża
   price: 22.5
   ingredients:
 
 rumcajs:
-  category_name: pizza
+  category: pizza
   name: Rumcajs duża
   price: 23
   ingredients:
 
 los_kurczakos:
-  category_name: pizza
+  category: pizza
   name: Los kurczakos duża
   price: 23
   ingredients:
 
 szpinka:
-  category_name: pizza
+  category: pizza
   name: Szpinka duża
   price: 21.5
   ingredients:
 
 czochol:
-  category_name: pizza
+  category: pizza
   name: Czochol duża
   price: 23
   ingredients:
 
 grecka:
-  category_name: pizza
+  category: pizza
   name: Grecka duża
   price: 21.5
   ingredients:
 
 pepperoni:
-  category_name: pizza
+  category: pizza
   name: Pepperoni duża
   price: 23
   ingredients:
 
 piatka:
-  category_name: pizza
+  category: pizza
   name: Piątka duża
   price: 23
   ingredients:
 
 danie_dnia:
-  category_name: main_course
+  category: main_course
   name: Danie dnia
   price: 15
   ingredients:
 
 rolada_wieprzowa:
-  category_name: main_course
+  category: main_course
   name: Rolada wieprzowa
   price: 23
   ingredients:
 
 filet_z_kurczaka:
-  category_name: main_course
+  category: main_course
   name: Filet z kurczaka
   price: 17
   ingredients:
 
 schabowy_po_wiedensku:
-  category_name: main_course
+  category: main_course
   name: Schabowy po wiedeńsku
   price: 19
   ingredients:
 
 schabowy_po_hawajsku:
-  category_name: main_course
+  category: main_course
   name: Schabowy po hawajsku
   price: 16
   ingredients:
 
 golonko_zapiekane:
-  category_name: main_course
+  category: main_course
   name: Golonko zapiekane
   price: 25
   ingredients:
 
 placek_po_wegiersku:
-  category_name: main_course
+  category: main_course
   name: Placek po węgiersku
   price: 18
   ingredients:
 
 camembert_smazony:
-  category_name: main_course
+  category: main_course
   name: Camembert smażony
   price: 17
   ingredients:
 
 barszcz_z_krokietem:
-  category_name: main_course
+  category: main_course
   name: Barszcz z krokietem
   price: 9
   ingredients:
 
 de_volaille:
-  category_name: main_course
+  category: main_course
   name: De Volaille
   price: 18
   ingredients:
 
 placki_ziemniaczane:
-  category_name: main_course
+  category: main_course
   name: Placki ziemniaczane
   price: 6
   ingredients:
 
 mozzarella_smazona:
-  category_name: main_course
+  category: main_course
   name: Mozzarella smażona
   price: 17
   ingredients:
 
 tyskie_gronie_lane_duze:
-  category_name: alcohol
+  category: alcohol
   name: Tyskie Gronie lane duże
   price: 5
 
 tyskie_gronie_lane_male:
-  category_name: alcohol
+  category: alcohol
   name: Tyskie Gronie lane małe
   price: 4
 
 tyskie_gronie_butelka:
-  category_name: alcohol
+  category: alcohol
   name: Tyskie Gronie butelka
   price: 5
 
 pilsner_urquell:
-  category_name: alcohol
+  category: alcohol
   name: Pilsner Urquell
   price: 7
 
 redds:
-  category_name: alcohol
+  category: alcohol
   name: Redd's
   price: 5
 
 gingers:
-  category_name: alcohol
+  category: alcohol
   name: Gingers
   price: 5
 
 lech_premium:
-  category_name: alcohol
+  category: alcohol
   name: Lech Premium
   price: 5
 
 tyskie_klasyczne:
-  category_name: alcohol
+  category: alcohol
   name: Tyskie Klasyczne
   price: 5
 
 zubr:
-  category_name: alcohol
+  category: alcohol
   name: Żubr
   price: 5
 
 desperados:
-  category_name: alcohol
+  category: alcohol
   name: Desperados
   price: 6.5
 
 zywiec:
-  category_name: alcohol
+  category: alcohol
   name: Żywiec
   price: 6
 
 karmi:
-  category_name: alcohol
+  category: alcohol
   name: Karmi
   price: 5
 
 raciborskie:
-  category_name: alcohol
+  category: alcohol
   name: Raciborskie
   price: 6
 
 raciborskie_miodowe:
-  category_name: alcohol
+  category: alcohol
   name: Raciborskie Miodowe
   price: 6.5
 
 zloty_bazant:
-  category_name: alcohol
+  category: alcohol
   name: Złoty Bażant
   price: 7
 
 piwo_grzane:
-  category_name: alcohol
+  category: alcohol
   name: Piwo grzane
   price: 7
 
 lech_free:
-  category_name: alcohol
+  category: alcohol
   name: Lech Free
   price: 4
 
 lampka_wina:
-  category_name: alcohol
+  category: alcohol
   name: Lampka wina
   price: 7
 
 grzaniec:
-  category_name: alcohol
+  category: alcohol
   name: Grzaniec
   price: 10
 
 butelka_wina:
-  category_name: alcohol
+  category: alcohol
   name: Butelka wina
   price: 25
 
 margherita_mala:
-  category_name: pizza
+  category: pizza
   name: Margherita mała
   price: 12.5
   ingredients:
 
 studencka_mala:
-  category_name: pizza
+  category: pizza
   name: Studencka mała
   price:  13.5
   ingredients:
 
 toska_mala:
-  category_name: pizza
+  category: pizza
   name: Toska mała
   price:  14
   ingredients:
 
 hawajka_mala:
-  category_name: pizza
+  category: pizza
   name: Hawajka mała
   price:  14.5
   ingredients:
 
 brokulka_mala:
-  category_name: pizza
+  category: pizza
   name: Brokułka mała
   price: 14.5
   ingredients:
 
 doremi_salami_mala:
-  category_name: pizza
+  category: pizza
   name: Do-re-mi-salami mała
   price:  15.5
   ingredients:
 
 morska_bryza_mala:
-  category_name: pizza
+  category: pizza
   name: Morska bryza mała
   price: 16
   ingredients:
 
 country_mala:
-  category_name: pizza
+  category: pizza
   name: Country mała
   price:  16
   ingredients:
 
 kowala_mala:
-  category_name: pizza
+  category: pizza
   name: Kowala mała
   price: 16
   ingredients:
 
 jarska_mala:
-  category_name: pizza
+  category: pizza
   name: Jarska mała
   price: 15.5
   ingredients:
 
 bartolomeo_mala:
-  category_name: pizza
+  category: pizza
   name: Bartolomeo mała
   price: 15.5
   ingredients:
 
 kaparina_mala:
-  category_name: pizza
+  category: pizza
   name: Kaparina mała
   price: 15.5
   ingredients:
 
 cztery_sery_mala:
-  category_name: pizza
+  category: pizza
   name: Cztery sery mała
   price:  14.5
   ingredients:
 
 pirat_krzys_mala:
-  category_name: pizza
+  category: pizza
   name: Pirat Krzyś mała
   price:  15.5
   ingredients:
 
 rumcajs_mala:
-  category_name: pizza
+  category: pizza
   name: Rumcajs mała
   price:  16
   ingredients:
 
 los_kurczakos_mala:
-  category_name: pizza
+  category: pizza
   name: Los kurczakos mała
   price:  16
   ingredients:
 
 szpinka_mala:
-  category_name: pizza
+  category: pizza
   name: Szpinka mała
   price:  14.5
   ingredients:
 
 czochol_mala:
-  category_name: pizza
+  category: pizza
   name: Czochol mała
   price:  16
   ingredients:
 
 grecka_mala:
-  category_name: pizza
+  category: pizza
   name: Grecka mała
   price: 14.5
   ingredients:
 
 pepperoni_mala:
-  category_name: pizza
+  category: pizza
   name: Pepperoni mała
   price:  16
   ingredients:
 
 piatka_mala:
-  category_name: pizza
+  category: pizza
   name: Piątka mała
   price:  16
   ingredients:
 
 beverage_02l:
-  category_name: beverage
+  category: beverage
   name: "Coca-Cola / Fanta / Sprite / Kinley / Cappy 0,2 l"
   price: 3
 
 beverage_05l:
-  category_name: beverage
+  category: beverage
   name: "Coca-Cola / Fanta / Sprite / Nestea 0,5 l"
   price: 5
 
 coca_cola_1l:
-  category_name: beverage
+  category: beverage
   name: "Coca-Cola 1 l"
   price: 7
 
 coca_cola_15l:
-  category_name: beverage
+  category: beverage
   name: "Coca-Cola 1,5 l"
   price: 8
 
 burn:
-  category_name: beverage
+  category: beverage
   name: Burn
   price: 7
 
 kropla_beskidu_05l:
-  category_name: beverage
+  category: beverage
   name: "Kropla Beskidu 0,5 l"
   price: 3
 
 sok_w_kartonie_1l:
-  category_name: beverage
+  category: beverage
   name: Sok w kartonie 1 l
   price: 7
 
 sok_z_marchwii:
-  category_name: beverage
+  category: beverage
   name: "Sok z marchwii 0,2 l"
   price: 5
 
 koktajl:
-  category_name: beverage
+  category: beverage
   name: "Koktajl owocowy 0,2 l"
   price: 5
 
 ciabatta:
-  category_name: fastfood
+  category: fastfood
   name: Ciabatta
   price: 10
   ingredients:
 
 hamburger:
-  category_name: fastfood
+  category: fastfood
   name: Hamburger
   price: 5
   ingredients:
 
 cheeseburger:
-  category_name: fastfood
+  category: fastfood
   name: Cheeseburger
   price: 6
   ingredients:
 
 chickenburger:
-  category_name: fastfood
+  category: fastfood
   name: Chickenburger
   price: 6
   ingredients:
 
 zapiekanka_z_pieca:
-  category_name: fastfood
+  category: fastfood
   name: Zapiekanka z pieca
   price: 6
   ingredients:
 
 hot_dog:
-  category_name: fastfood
+  category: fastfood
   name: Hot Dog
   price: 5
   ingredients:
 
 tortilla:
-  category_name: fastfood
+  category: fastfood
   name: Tortilla
   price: 9
   ingredients:
 
 frytki_male:
-  category_name: fastfood
+  category: fastfood
   name: Frytki małe
   price: 4
   ingredients:
 
 frytki_duze:
-  category_name: fastfood
+  category: fastfood
   name: Frytki duże
   price: 6.5
   ingredients:
 
 chicken_nuggets:
-  category_name: fastfood
+  category: fastfood
   name: Chicken Nuggets
   price: 6
   ingredients:
 
 buleczki_szefa:
-  category_name: fastfood
+  category: fastfood
   name: Bułeczki Szefa
   price: 2
   ingredients:
 
 nalesnik_jarski:
-  category_name: pancake
+  category: pancake
   name: Naleśnik Jarski
   price: 10
   ingredients:
 
 nalesnik_morski:
-  category_name: pancake
+  category: pancake
   name: Naleśnik Morski
   price: 14
   ingredients:
 
 nalesnik_kowala:
-  category_name: pancake
+  category: pancake
   name: Naleśnik Kowala
   price: 15
   ingredients:
 
 nalesnik_hawajski:
-  category_name: pancake
+  category: pancake
   name: Naleśnik Hawajski
   price: 12
   ingredients:
 
 nalesnik_meksykanski:
-  category_name: pancake
+  category: pancake
   name: Naleśnik Meksykański
   price: 15
   ingredients:
 
 nalesnik_szpinaczek:
-  category_name: pancake
+  category: pancake
   name: Naleśnik Szpinaczek
   price: 12
   ingredients:
 
 nalesnik_zloty_kurczak:
-  category_name: pancake
+  category: pancake
   name: Naleśnik Złoty Kurczak
   price: 15
   ingredients:
 
 nalesnik_nutek:
-  category_name: pancake
+  category: pancake
   name: Nutek
   price: 8
   ingredients:
 
 nalesnik_twarozek:
-  category_name: pancake
+  category: pancake
   name: Twarożek
   price: 12
   ingredients:
 
 bolognese:
-  category_name: spaghetti
+  category: spaghetti
   name: Bolognese
   price: 18
   ingredients:
 
 napoli:
-  category_name: spaghetti
+  category: spaghetti
   name: Napoli
   price: 15
   ingredients:
 
 carbonara:
-  category_name: spaghetti
+  category: spaghetti
   name: Carbonara
   price: 18
   ingredients:
 
 mozzarella:
-  category_name: spaghetti
+  category: spaghetti
   name: Spaghetti Mozzarella
   price: 15
   ingredients:
 
 espresso:
-  category_name: dessert
+  category: dessert
   name: Espresso
   price: 6
 
 kawa_czarna:
-  category_name: dessert
+  category: dessert
   name: Kawa czarna
   price: 6
 
 latte_macchiato:
-  category_name: dessert
+  category: dessert
   name: Latte Macchiato
   price: 7
 
 latte_macchiato_cinammon:
-  category_name: dessert
+  category: dessert
   name: Latte Macchiato Cinammon / Toffi
   price: 8
 
 cappucino:
-  category_name: dessert
+  category: dessert
   name: Cappucino
   price: 6
 
 kawa_mrozona:
-  category_name: dessert
+  category: dessert
   name: Kawa mrożona
   price: 7
 
 kawa_parzona:
-  category_name: dessert
+  category: dessert
   name: Kawa parzona
   price: 5
 
 smietanka_do_kawy:
-  category_name: dessert
+  category: dessert
   name: Śmietanka do kawy
   price: 0.5
 
 herbata:
-  category_name: dessert
+  category: dessert
   name: Herbata
   price: 5
 
 deser_lodowy:
-  category_name: dessert
+  category: dessert
   name: Deser lodowy
   price: 8
   ingredients:
 
 galaretka:
-  category_name: dessert
+  category: dessert
   name: Galaretka z owocami
   price: 6
 
 deser_dnia:
-  category_name: dessert
+  category: dessert
   name: Deser Dnia
   price: 10
