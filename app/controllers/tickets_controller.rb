@@ -1,5 +1,6 @@
 class TicketsController < ApplicationController
   before_filter :initialize_ticket
+  protect_from_forgery except: :destroy
 
 
   def new
@@ -22,6 +23,17 @@ class TicketsController < ApplicationController
     @tickets = Ticket.where("status = ?", "underway").to_a
     session.destroy
     respond_to :js
+  end
+
+  def destroy
+    Ticket.find(params[:id]).destroy
+    respond_to :js
+  end
+
+  def close
+    Ticket.find(params[:id]).update_attribute(:status, "closed")
+    @tickets = Ticket.where("status = ?", "underway").to_a
+    render :action => "create"
   end
 
   # def prepare

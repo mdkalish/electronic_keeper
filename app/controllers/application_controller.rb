@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def initialize_ticket
+    # binding.pry
     if session[:ticket_id]
       @ticket = Ticket.find(session[:ticket_id])
     else

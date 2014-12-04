@@ -1,1 +1,4 @@
 $('#main').html('<%= j render("show_category") %>')
+$('.item-button').on('click', function() {
+  $(this).find('a')[0].click();
+});
