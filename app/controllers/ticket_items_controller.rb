@@ -8,7 +8,12 @@ class TicketItemsController < ApplicationController
     params[:decrement] ? crement(@ticket_item, '-') : crement(@ticket_item, '+') && @ticket.ticket_items<<@ticket_item
     @ticket_item.update_attribute(:price, @ticket_item.amount * @product.price)
     @ticket_item.destroy_item_if_amount_is(0)
-    respond_to :js
+    # binding.pry
+    respond_to :js #{ :locals => { :amount = @ticket.ticket_items.count } }
   end
 
 end
+
+# respond_to do |format|
+#   format.js { render "action", :locals => {:id => params[:id]} }
+# end

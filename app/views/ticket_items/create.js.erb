@@ -1,1 +1,5 @@
-$('#current-ticket').html('<%= j render("tickets/show_ticket") %>')
+<% if @ticket.ticket_items.count == 0 %>
+  $('#current-ticket').empty();
+<% else %>
+  $('#current-ticket').html('<%= j render("tickets/show_ticket") %>');
+<% end %>

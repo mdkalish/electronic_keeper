@@ -4,7 +4,7 @@ class TicketItem < ActiveRecord::Base
 
   def destroy_item_if_amount_is(value)
     if self.amount == value
-      self.destroy
+      destroy
     end
   end
 
