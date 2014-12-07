@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def current_ticket_summary(ticket)
-    "Bieżące zamówienie: #{ticket.count_items} rzeczy za #{convert_to_pln(ticket.calculate_total_price.to_f)}"
+    "Zamówienie nr #{ticket.id}: #{ticket.count_items} rzeczy za #{convert_to_pln(ticket.calculate_total_price.to_f)}"
   end
 
 end

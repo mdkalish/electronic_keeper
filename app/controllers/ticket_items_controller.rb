@@ -7,13 +7,9 @@ class TicketItemsController < ApplicationController
     @ticket_item = TicketItem.find_or_create_by(ticket_id: session[:ticket_id], product_id: @product.id)
     params[:decrement] ? crement(@ticket_item, '-') : crement(@ticket_item, '+') && @ticket.ticket_items<<@ticket_item
     @ticket_item.update_attribute(:price, @ticket_item.amount * @product.price)
-    @ticket_item.destroy_item_if_amount_is(0)
+    @ticket_item.destroy_item_if_amount_lte(0)
     # binding.pry
-    respond_to :js #{ :locals => { :amount = @ticket.ticket_items.count } }
+    respond_to :js
   end
 
 end
-
-# respond_to do |format|
-#   format.js { render "action", :locals => {:id => params[:id]} }
-# end

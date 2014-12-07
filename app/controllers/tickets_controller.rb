@@ -1,7 +1,8 @@
 class TicketsController < ApplicationController
   before_filter :initialize_ticket
-  protect_from_forgery except: :destroy
-
+  skip_before_action :verify_authenticity_token
+  # protect_from_forgery except: [:destroy, :create, :show]
+  # skip_before_filter :verify_authenticity_token
 
   def new
     @ticket = Ticket.new
@@ -17,6 +18,7 @@ class TicketsController < ApplicationController
   end
 
   def create
+    # binding.pry
     @ticket = Ticket.find(session[:ticket_id])
     @ticket.update_attribute(:status, "underway")
     @ticket.save
@@ -27,43 +29,22 @@ class TicketsController < ApplicationController
 
   def destroy
     Ticket.find(params[:id]).destroy
-    respond_to :js
+    head :ok
   end
 
-  def close
-    Ticket.find(params[:id]).update_attribute(:status, "closed")
-    @tickets = Ticket.where("status = ?", "underway").to_a
-    render :action => "create"
+  def update
+    if !params[:data].blank?
+      Ticket.find(params[:id]).update_attribute(:status, params[:data][:status])
+      head :ok
+    else
+      @ticket = Ticket.find(params[:id])
+      session[:ticket_id] = @ticket.id
+      render "ticket_items/create", format: :js
+      # respond_to :js
+      # respond_to do |format|
+      #   format.js { render "ticket_items/create" }
+      # end
+    end
   end
-
-  # def prepare
-  #   @ticket = Ticket.last
-  #   if @ticket.status != "open"
-  #     @ticket = Ticket.create!
-  #   end
-  #   # binding.pry
-  #   p '-----------------'
-  #   p @ticket
-  #   p '-----------------'
-  #   @ticket.products<<(Product.find(params[:id]))
-  #   p '-----------------'
-  #   p @ticket
-  #   p '-----------------'
-  #   # binding.pry
-  #   respond_to :js
-  # end
-
-  def remove_product_from_ticket
-  end
-
-  private
-
-    # def ticket_params
-    #   params.require(:ticket).permit(:total_price, :items_count,
-    #                                  :alcohol, :to_be_served_at,
-    #                                  :delivery_address, :created_by,
-    #                                  :ordered_by, :status,
-    #                                  :created_at)
-    # end
 
 end

@@ -1,4 +1,4 @@
 #show_category
   - @category.each do |product|
-    .col-lg-6.btn.btn-default.item-button
-      = link_to button_label_for(product, product.price), add_to_ticket_path(:id => product.id), remote: true
+    .col-lg-6
+      = button_to button_label_for(product, product.price), add_to_ticket_path(:id => product.id), method: :post, remote: true

@@ -2,9 +2,12 @@ body {
   padding: 80px 20px 80px 140px;
 }
 
-.item-button {
+input {
   padding: 30px;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: .5;
+  height: 100%;
+  width: 100%;
 }
 
 .current-tickets {

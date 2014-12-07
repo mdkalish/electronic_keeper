@@ -18,8 +18,8 @@
       %td
         = convert_to_pln(ticket.total_price)
       %td
-        = link_to "Anuluj", cancel_ticket_path(:id => ticket.id), method: :delete, remote: true
+        = link_to "Anuluj", cancel_ticket_path(:id => ticket.id), method: :delete, :onclick => "$(this).closest('tr').remove()", remote: true
       %td
-        = link_to "Szczegóły", '#'
+        = link_to "Podgląd / Edycja", update_ticket_path(:id => ticket.id), :onclick => "$(this).closest('tr').remove()", :remote => true
       %td
-        = link_to "Zamknij", close_ticket_path(:id => ticket.id), remote: true
+        = link_to "Zamknij", update_ticket_path(:id => ticket.id, :data => { status: "closed"}), method: :post, :onclick => "$(this).closest('tr').remove()", :remote => true
