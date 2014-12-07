@@ -26,3 +26,10 @@ group :development, :test do
   gem 'pry'
   gem 'rspec'
 end
+group :production do
+  gem 'pg', '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+  gem 'rack-cache'
+  gem 'aws-sdk'
+end
+
