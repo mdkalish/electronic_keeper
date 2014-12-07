@@ -1,6 +1,6 @@
 # Electronic Keeper
 
-**Electronic Keeper** (EK) is a tool targeted at small-to-medium enterprises, designed for use by the lowest-rank workers, largely computer-illiterate, therefore intuitive GUI is king.
+**Electronic Keeper** (EK) is a tool targeted at small-to-medium enterprises, designed for use by the lowest-rank workers, largely computer-illiterate, therefore intuitive GUI is king. **The application is to be used foremostly on touchscreen.**
 
 
 ## Contents
