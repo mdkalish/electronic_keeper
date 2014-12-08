@@ -1,0 +1,5 @@
+$('#current-ticket').html('<%= j render("tickets/show_ticket") %>');
+$('#current-tickets').html('<%= j render("tickets/current_tickets") %>');
+$('#<%= @ticket.id %>').remove();
+
+

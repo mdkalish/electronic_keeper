@@ -1,8 +1,6 @@
 class TicketsController < ApplicationController
   before_filter :initialize_ticket
   skip_before_action :verify_authenticity_token
-  # protect_from_forgery except: [:destroy, :create, :show]
-  # skip_before_filter :verify_authenticity_token
 
   def new
     @ticket = Ticket.new
@@ -21,7 +19,7 @@ class TicketsController < ApplicationController
     # binding.pry
     @ticket = Ticket.find(session[:ticket_id])
     @ticket.update_attribute(:status, "underway")
-    @ticket.save
+    @ticket.products.count == 0 ? @ticket.destroy : @ticket.save
     @tickets = Ticket.where("status = ?", "underway").to_a
     session.destroy
     respond_to :js
@@ -33,17 +31,19 @@ class TicketsController < ApplicationController
   end
 
   def update
-    if !params[:data].blank?
+    if params[:data].present?
       Ticket.find(params[:id]).update_attribute(:status, params[:data][:status])
       head :ok
     else
+      # binding.pry
       @ticket = Ticket.find(params[:id])
+      if session[:ticket_id].present?
+        t = Ticket.find(session[:ticket_id])
+        t.products.count == 0 ? t.destroy : t.update_attribute(:status, "underway")
+      end
+      @tickets = Ticket.where("status = ?", "underway").to_a
       session[:ticket_id] = @ticket.id
-      render "ticket_items/create", format: :js
-      # respond_to :js
-      # respond_to do |format|
-      #   format.js { render "ticket_items/create" }
-      # end
+      respond_to :js
     end
   end
 

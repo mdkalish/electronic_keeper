@@ -17,15 +17,4 @@ class Ticket < ActiveRecord::Base
     self.items_count = count_items
   end
 
-  # def destroy_empty
-  #   if self.count_items == 0
-  #     destroy
-  #   end
-  # end
-
-  # def contains_alcohol?
-  #   b = products.map(&:category_name).include?("alcohol")
-  #   self.alcohol = b
-  # end
-
 end

@@ -9,8 +9,8 @@
   #main-wrapper.col-lg-6
     .current-tickets
       #current-ticket
-        = render plain: "Div.current-tickets#current-ticket"
+        = render 'tickets/show_ticket'
     .current-tickets
       #current-tickets
-        = render plain: "Div.current-tickets#current-tickets"
+        = render 'tickets/current_tickets'
 
