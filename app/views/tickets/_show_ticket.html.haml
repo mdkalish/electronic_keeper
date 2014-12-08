@@ -11,7 +11,7 @@
     %th.col-lg-2= "Cena za szt."
     %th.col-lg-2= "Ilość"
     %th.col-lg-2= "Cena w sumie"
-    - @ticket.ticket_items.reverse.each do |item|
+    - @ticket.ticket_items.each do |item|
       %tr
         %td
           = link_to image_tag("remove.png", size: '35x35'), add_to_ticket_path(item.product.id, :decrement => true), method: :post, remote: true
@@ -23,3 +23,4 @@
           = item.amount
         %td#total-price
           = convert_to_pln(item.price)
+
