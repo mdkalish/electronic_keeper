@@ -14,7 +14,23 @@ module ApplicationHelper
   end
 
   def current_ticket_summary(ticket)
-    "Zamówienie nr #{ticket.id}: #{ticket.count_items} rzeczy za #{convert_to_pln(ticket.calculate_total_price.to_f)}"
+    id = ticket.id
+    price = convert_to_pln(ticket.calculate_total_price)
+    text = "Zamówienie nr #{id}: #{ticket.count_items} rzeczy za #{price.to_f}"
+    # binding.pry
+    content_tag(:span, text, :id => id, 'data-ticket-price' => price)
+  end
+
+  def daily_turnover
+    daily_turnover = Ticket.all.where("status = ?", "closed").to_a.map(&:total_price).inject(0, :+)
+    text = "Daily turnover: #{daily_turnover}"
+    content_tag(:span, text, 'data-daily-turnover' => daily_turnover)
+  end
+
+  def total_tickets(status)
+    count = Ticket.all.where("status = ?", status).count
+    text = "#{status.capitalize} tickets: #{count}"
+    content_tag(:span, text, 'data-opened-tickets' => count)
   end
 
 end

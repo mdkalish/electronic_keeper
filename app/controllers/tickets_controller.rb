@@ -31,9 +31,9 @@ class TicketsController < ApplicationController
   end
 
   def update
-    if params[:data].present?
-      Ticket.find(params[:id]).update_attribute(:status, params[:data][:status])
-      head :ok
+    if params[:status] == "closed"
+      Ticket.find(params[:id]).update_attribute(:status, params[:status])
+      # head :ok
     else
       # binding.pry
       @ticket = Ticket.find(params[:id])
@@ -43,8 +43,8 @@ class TicketsController < ApplicationController
       end
       @tickets = Ticket.where("status = ?", "underway").to_a
       session[:ticket_id] = @ticket.id
-      respond_to :js
     end
+    respond_to :js
   end
 
 end

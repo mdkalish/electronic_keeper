@@ -1,4 +1,4 @@
-.navbar-fixed-bottom.col-lg-12{ :style => "padding: 0" }
+.navbar-fixed-bottom.col-lg-12#footer{ :style => "padding: 0" }
   .btn-toolbar{ :role => "toolbar" }
     .btn-group.btn-group-justified{ :role => "group" }
       .btn-group{ :role => "group" }
@@ -6,10 +6,10 @@
           = link_to "Logged in as", '#'
       .btn-group{ :role => "group" }
         %button.btn.btn-default#footer-stats
-          = link_to "Total tickets underway: #{Ticket.all.where("status = ?", "underway").count}" ,'#'
+          = total_tickets('underway')
       .btn-group{ :role => "group" }
         %button.btn.btn-default
-          = link_to "Tickets created / Tickets closed", '#'
+          = total_tickets('open')
       .btn-group{ :role => "group" }
-        %button.btn.btn-default
-          = link_to "Daily turnover: #{Ticket.all.where("status = ?", "closed").to_a.map(&:total_price).inject(0, :+)}", '#'
+        %button.btn.btn-default#daily-turnover
+          = daily_turnover
