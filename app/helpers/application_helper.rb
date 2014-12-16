@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def init_tickets
+    @tickets = Ticket.all.where("status = ?", "underway").to_a
+  end
+
   def init_ticket(status = "")
     @ticket = Ticket.find_or_initialize_by(status: status)
   end
