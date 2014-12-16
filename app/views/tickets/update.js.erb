@@ -1,7 +1,8 @@
 $('#daily-turnover').html('<%= daily_turnover %>');
+$('#underway-tickets').html('<%= total_tickets("underway") %>');
+$('#open-tickets').html('<%= total_tickets("open") %>');
+$('#closed-tickets').html('<%= total_tickets("closed") %>');
 <% if params[:status] != "closed" %>
   $('#current-ticket').html('<%= j render("tickets/show_ticket") %>');
   $('#current-tickets').html('<%= j render("tickets/current_tickets") %>').find('#<%= @ticket.id %>').remove();
 <% end %>
-
-

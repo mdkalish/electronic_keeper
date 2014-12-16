@@ -15,6 +15,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
 gem 'pusher'
+gem 'active_model_serializers'
 group :development do
   gem 'spring'
   gem 'better_errors'

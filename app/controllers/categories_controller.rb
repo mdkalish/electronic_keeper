@@ -1,11 +1,7 @@
 class CategoriesController < ApplicationController
 
-  def index
-    @categories = Category.all
-  end
-
   def show
-    @category = Product.where("category_id = ?", params[:category_id]).to_a.sort_by!{ |item| item.name }
+    @category = Category.find(params[:category_id])
     respond_to :js
   end
 

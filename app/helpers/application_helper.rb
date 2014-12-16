@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def init_ticket(status = "")
+    @ticket = Ticket.find_or_initialize_by(status: status)
+  end
+
   def icon_for(category)
     icon = "left_sidebar/64/#{category}.png"
   end
@@ -30,7 +34,7 @@ module ApplicationHelper
   def total_tickets(status)
     count = Ticket.all.where("status = ?", status).count
     text = "#{status.capitalize} tickets: #{count}"
-    content_tag(:span, text, 'data-opened-tickets' => count)
+    content_tag(:span, text, "data-#{status}-tickets" => count)
   end
 
 end

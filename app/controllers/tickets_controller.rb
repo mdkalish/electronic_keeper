@@ -1,13 +1,19 @@
 class TicketsController < ApplicationController
   before_filter :initialize_ticket
   skip_before_action :verify_authenticity_token
+  # respond_to :json, :js, :html
 
   def new
     @ticket = Ticket.new
   end
 
   def index
+    # binding.pry
     @tickets = Ticket.all
+    respond_to do |format|
+      format.html { render html: "<h1>Check #{params[:controller]}.json</h1>".html_safe }
+      format.json { render json: @tickets } # root: false
+    end
   end
 
   def show
@@ -16,35 +22,32 @@ class TicketsController < ApplicationController
   end
 
   def create
-    # binding.pry
-    @ticket = Ticket.find(session[:ticket_id])
     @ticket.update_attribute(:status, "underway")
-    @ticket.products.count == 0 ? @ticket.destroy : @ticket.save
-    @tickets = Ticket.where("status = ?", "underway").to_a
-    session.destroy
+    @ticket.destroy unless @ticket.count_products != 0
+    @tickets = Ticket.find_all("underway")
+    session[:ticket_id] = nil
     respond_to :js
   end
 
   def destroy
     Ticket.find(params[:id]).destroy
-    head :ok
+    respond_to :js
+  end
+
+  def edit
+    # binding.pry
+    @ticket.update_attribute(:status, "underway") unless @ticket.count_products == 0
+    @ticket  = Ticket.find(params[:id])
+    @tickets = Ticket.find_all("underway")
+    session[:ticket_id] = @ticket.id
+    render 'tickets/update', format: :js
   end
 
   def update
     if params[:status] == "closed"
       Ticket.find(params[:id]).update_attribute(:status, params[:status])
-      # head :ok
-    else
-      # binding.pry
-      @ticket = Ticket.find(params[:id])
-      if session[:ticket_id].present?
-        t = Ticket.find(session[:ticket_id])
-        t.products.count == 0 ? t.destroy : t.update_attribute(:status, "underway")
-      end
-      @tickets = Ticket.where("status = ?", "underway").to_a
-      session[:ticket_id] = @ticket.id
+      respond_to :js
     end
-    respond_to :js
   end
 
 end

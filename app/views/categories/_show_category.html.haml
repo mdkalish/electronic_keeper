@@ -1,4 +1,6 @@
 #show_category
-  - @category.each do |product|
-    .col-lg-6
+  - if !@category
+    - @category = Category.find_by_name('pizza')
+  - @category.products.to_a.sort_by{ |item| item.name }.each do |product|
+    .col-lg-6.product-button{:id => "#{product.id}" }
       = button_to button_label_for(product, product.price), add_to_ticket_path(:id => product.id), method: :post, remote: true

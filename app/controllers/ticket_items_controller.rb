@@ -1,15 +1,16 @@
 class TicketItemsController < ApplicationController
-  before_filter :initialize_ticket
-
+  before_filter :initialize_ticket, :initialize_ticket_item
 
   def create
-    @product = Product.find(params[:id])
-    @ticket_item = TicketItem.find_or_create_by(ticket_id: session[:ticket_id], product_id: @product.id)
-    params[:decrement] ? crement(@ticket_item, '-') : crement(@ticket_item, '+') && @ticket.ticket_items<<@ticket_item
-    @ticket_item.update_attribute(:price, @ticket_item.amount * @product.price)
-    @ticket_item.destroy_item_if_amount_lte(0)
-    # binding.pry
+    @ticket_item.crement('+') && @ticket.ticket_items<<@ticket_item
+    @ticket_item.update_price
     respond_to :js
+  end
+
+  def update
+    @ticket_item.crement('-') unless params[:decrement].nil?
+    @ticket_item.update_price
+    render action: 'create'
   end
 
 end

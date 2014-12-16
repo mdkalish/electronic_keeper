@@ -24,8 +24,8 @@
         %td
           = convert_to_pln(ticket.total_price)
         %td
-          = link_to "Anuluj", cancel_ticket_path(:id => ticket.id), method: :delete, :onclick => "$(this).closest('tr').remove()", remote: true
+          = link_to "Anuluj", cancel_ticket_path(:id => ticket.id), method: :delete, :onclick => "$(this).closest('tr').remove();", remote: true
         %td
-          = link_to "Podgląd / Edycja", update_ticket_path(:id => ticket.id), :remote => true
+          = link_to "Podgląd / Edycja", edit_ticket_path(:id => ticket.id), :remote => true
         %td
           = link_to "Zamknij", update_ticket_path(:id => ticket.id, :status => "closed"), :data => { status: "closed"}, method: :post, :onclick => "$(this).closest('tr').remove()", :remote => true

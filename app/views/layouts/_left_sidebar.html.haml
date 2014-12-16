@@ -1,3 +1,4 @@
 - Category::CATEGORIES.each do |category|
-  %li.col-lg-12.btn.btn-default
-    = link_to image_tag(icon_for(category.pluralize)), show_category_path(category_id: Category.find_by("name = ?", category).id), remote: true
+  - category = Category.find_by_name(category)
+  %li.col-lg-12.btn.btn-default.category{:id => "#{category.id}"}
+    = link_to image_tag(icon_for(category.name.pluralize)), show_category_path(category_id: category.id), remote: true
