@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211185818) do
+ActiveRecord::Schema.define(version: 20141217150919) do
 
   create_table "categories", force: true do |t|
     t.string "name"
@@ -40,15 +40,16 @@ ActiveRecord::Schema.define(version: 20141211185818) do
   end
 
   create_table "tickets", force: true do |t|
-    t.decimal  "total_price",      default: 0.0
-    t.integer  "items_count",      default: 0
-    t.boolean  "alcohol",          default: true
+    t.decimal  "total_price",                  default: 0.0
+    t.integer  "items_count",                  default: 0
+    t.boolean  "alcohol",                      default: true
     t.datetime "to_be_served_at"
     t.string   "delivery_address"
     t.string   "created_by"
     t.string   "ordered_by"
-    t.string   "status",           default: "open"
+    t.string   "status",                       default: "open"
     t.datetime "created_at"
+    t.boolean  "delivery",         limit: 255, default: true
   end
 
   add_index "tickets", ["created_at", "created_by"], name: "index_tickets_on_created_at_and_created_by"

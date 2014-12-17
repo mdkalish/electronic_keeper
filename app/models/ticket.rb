@@ -4,6 +4,18 @@ class Ticket < ActiveRecord::Base
   before_save :update_values
   accepts_nested_attributes_for :products
 
+  def toggle
+    if delivery == true
+      update_attribute(:delivery, false)
+    else
+      update_attribute(:delivery, true)
+    end
+  end
+
+  def translate_delivery
+    delivery == true ? "Na wynos" : "Na miejscu"
+  end
+
   def calculate_total_price
     ticket_items.map(&:price).inject(0, :+)
   end

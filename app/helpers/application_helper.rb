@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def init_ticket(status = "")
-    @ticket = Ticket.find_or_initialize_by(status: status)
+    @ticket = Ticket.find_or_initialize_by(status: status) || Ticket.last
   end
 
   def icon_for(category)

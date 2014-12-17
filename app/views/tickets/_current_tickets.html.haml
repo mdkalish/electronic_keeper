@@ -2,31 +2,23 @@
 - if @tickets.nil?
   = render plain: 'No tickets underway'
 - else
-  %table.table.table-hover.table-bordered
-    %th.col-lg-1= "Nr zamówienia"
-    %th.col-lg-1= "Status"
-    %th.col-lg-2= "Odbiór"
-    %th.col-lg-2= "Kiedy przyjęto"
-    %th.col-lg-1= "sum / uniq"
-    %th.col-lg-1= "Kwota"
-    %th.col-lg-3{:colspan => "3"}= "Akcje"
-    - @tickets.each do |ticket|
-      %tr{:id => ticket.id }
-        %td
-          = ticket.id
-        %td
-          = ticket.status
-        %td
-          = ["Na miejscu", "Na wynos"].sample
-        %td
-          = "#{ticket.created_at.localtime.strftime('%H:%M')} (#{time_ago_in_words(ticket.created_at)} ago)"
-        %td
-          = "#{ticket.items_count} / #{ticket.products.count}"
-        %td
-          = convert_to_pln(ticket.total_price)
-        %td
-          = link_to "Anuluj", cancel_ticket_path(:id => ticket.id), method: :delete, :onclick => "$(this).closest('tr').remove();", remote: true
-        %td
-          = link_to "Podgląd / Edycja", edit_ticket_path(:id => ticket.id), :remote => true
-        %td
-          = link_to "Zamknij", update_ticket_path(:id => ticket.id, :status => "closed"), :data => { status: "closed"}, method: :post, :onclick => "$(this).closest('tr').remove()", :remote => true
+  - @tickets.each do |ticket|
+    %tr{:id => ticket.id }
+      %td
+        = ticket.id
+      %td
+        = ticket.status
+      %td
+        = ticket.delivery == true ? "Na wynos" : "Na miejscu"
+      %td
+        = "#{ticket.created_at.localtime.strftime('%H:%M')} (#{time_ago_in_words(ticket.created_at)} ago)"
+      %td
+        = "#{ticket.items_count} / #{ticket.products.count}"
+      %td
+        = convert_to_pln(ticket.total_price)
+      %td
+        = link_to "Anuluj", cancel_ticket_path(:id => ticket.id), method: :delete, :onclick => "$(this).closest('tr').remove();", remote: true
+      %td
+        = link_to "Podgląd / Edycja", edit_ticket_path(:id => ticket.id), :remote => true
+      %td
+        = link_to "Zamknij", update_ticket_path(:id => ticket.id, :status => "closed"), :data => { status: "closed"}, method: :post, :onclick => "$(this).closest('tr').remove()", :remote => true

@@ -25,7 +25,7 @@ class TicketsController < ApplicationController
     @ticket.update_attribute(:status, "underway")
     @ticket.destroy unless @ticket.count_products != 0
     @tickets = Ticket.find_all("underway")
-    session[:ticket_id] = nil
+    session.destroy
     respond_to :js
   end
 
@@ -35,7 +35,6 @@ class TicketsController < ApplicationController
   end
 
   def edit
-    # binding.pry
     @ticket.update_attribute(:status, "underway") unless @ticket.count_products == 0
     @ticket  = Ticket.find(params[:id])
     @tickets = Ticket.find_all("underway")
@@ -46,8 +45,11 @@ class TicketsController < ApplicationController
   def update
     if params[:status] == "closed"
       Ticket.find(params[:id]).update_attribute(:status, params[:status])
-      respond_to :js
     end
+    if params[:delivery]
+      @ticket.toggle
+    end
+    respond_to :js
   end
 
 end
