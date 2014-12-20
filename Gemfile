@@ -16,6 +16,7 @@ gem 'bootstrap-will_paginate'
 gem 'will_paginate'
 gem 'pusher'
 gem 'active_model_serializers'
+gem 'whenever', :require => false
 group :development do
   gem 'spring'
   gem 'better_errors'

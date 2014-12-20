@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def current_ticket_summary(ticket)
-    id = ticket.id
+    id = "#{ticket.id}(#{ticket.todays_nr})"
     price = convert_to_pln(ticket.calculate_total_price)
     text = "Zamówienie nr #{id}: #{ticket.count_items} rzeczy za #{price.to_f}"
     # binding.pry

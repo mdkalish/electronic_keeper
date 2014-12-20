@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217150919) do
+ActiveRecord::Schema.define(version: 20141220150021) do
 
   create_table "categories", force: true do |t|
     t.string "name"
@@ -50,6 +50,9 @@ ActiveRecord::Schema.define(version: 20141217150919) do
     t.string   "status",                       default: "open"
     t.datetime "created_at"
     t.boolean  "delivery",         limit: 255, default: true
+    t.datetime "closed_at"
+    t.datetime "underwayed_at"
+    t.integer  "todays_nr"
   end
 
   add_index "tickets", ["created_at", "created_by"], name: "index_tickets_on_created_at_and_created_by"

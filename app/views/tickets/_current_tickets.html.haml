@@ -5,7 +5,7 @@
   - @tickets.each do |ticket|
     %tr{:id => ticket.id }
       %td
-        = ticket.id
+        = "#{ticket.id}(#{ticket.todays_nr})"
       %td
         = ticket.status
       %td

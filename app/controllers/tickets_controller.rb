@@ -8,7 +8,6 @@ class TicketsController < ApplicationController
   end
 
   def index
-    # binding.pry
     @tickets = Ticket.all
     respond_to do |format|
       format.html { render html: "<h1>Check #{params[:controller]}.json</h1>".html_safe }
@@ -22,10 +21,14 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @ticket.update_attribute(:status, "underway")
-    @ticket.destroy unless @ticket.count_products != 0
+    # flash[:success] = "Ticket created!"
+    # binding.pry
+    if @ticket.underwayed_at == nil
+      @ticket.update(underwayed_at: Time.now)
+    end
+    @ticket.count_products != 0 ? @ticket.update(status: "underway") : @ticket.destroy
     @tickets = Ticket.find_all("underway")
-    session.destroy
+    reset_session
     respond_to :js
   end
 
@@ -44,7 +47,7 @@ class TicketsController < ApplicationController
 
   def update
     if params[:status] == "closed"
-      Ticket.find(params[:id]).update_attribute(:status, params[:status])
+      Ticket.find(params[:id]).update(status: params[:status], closed_at: Time.now)
     end
     if params[:delivery]
       @ticket.toggle
