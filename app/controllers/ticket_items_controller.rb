@@ -2,9 +2,9 @@ class TicketItemsController < ApplicationController
   before_filter :initialize_ticket, :initialize_ticket_item
 
   def create
+    # binding.pry
     @ticket_item.crement('+') && @ticket.ticket_items<<@ticket_item
     @ticket_item.update_price
-    # binding.pry
     respond_to :js
   end
 

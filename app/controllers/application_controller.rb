@@ -4,12 +4,12 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
 
   def initialize_ticket
-    # binding.pry
     @ticket = Ticket.find_by_id(session[:ticket_id])
     if @ticket.nil?
       @ticket = Ticket.find_by_status("open") || Ticket.create!
       session[:ticket_id] = @ticket.id
-      @ticket.update!(todays_nr: Ticket.set_todays_nr) unless @ticket.todays_nr != nil
+      # binding.pry
+      @ticket.update!(todays_nr: Ticket.set_todays_nr) if @ticket.todays_nr == nil
     end
   end
 

@@ -53,8 +53,7 @@ class Ticket < ActiveRecord::Base
   end
 
   def self.how_many_today
-    todays_tickets = Ticket.all.to_a.select!{ |t| t.created_at.to_date == Date.today }
-    todays_tickets == nil ? 0 : todays_tickets.count
+    Ticket.where("DATE(created_at) = DATE(?)", Date.today).count
   end
 
   # This method is scheduled with cron; check config/schedule.rb
@@ -64,7 +63,7 @@ class Ticket < ActiveRecord::Base
 
   def self.set_todays_nr
     if @todays_nr.nil?
-      @todays_nr = how_many_today + 1
+      @todays_nr = how_many_today
     else
       @todays_nr += 1
     end
