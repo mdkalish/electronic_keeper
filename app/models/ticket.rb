@@ -1,6 +1,7 @@
 class Ticket < ActiveRecord::Base
   has_many :ticket_items, dependent: :destroy
   has_many :products, through: :ticket_items
+  belongs_to :user
   before_save :update_values
   accepts_nested_attributes_for :products
 

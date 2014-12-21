@@ -35,6 +35,7 @@ GEM
     aws-sdk-v1 (1.58.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
+    bcrypt (3.1.9)
     better_errors (2.0.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -175,6 +176,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   aws-sdk
+  bcrypt
   better_errors
   binding_of_caller
   bootstrap-sass
