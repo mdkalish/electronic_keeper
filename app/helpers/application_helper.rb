@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def init_tickets
-    @tickets = Ticket.all.where("status = ?", "underway").to_a
+    @tickets = Ticket.where("status = ?", "underway").to_a
   end
 
   def init_ticket(status = "")
@@ -30,13 +30,19 @@ module ApplicationHelper
   end
 
   def daily_turnover
-    daily_turnover = Ticket.all.where("status = ?", "closed").to_a.map(&:total_price).inject(0, :+)
+    daily_turnover = Ticket.daily_turnover
     text = "Daily turnover: #{daily_turnover}"
     content_tag(:span, text, 'data-daily-turnover' => daily_turnover)
   end
 
   def total_tickets(status)
-    count = Ticket.all.where("status = ?", status).count
+    count = Ticket.total_tickets(status)
+    text = "#{status.capitalize} tickets: #{count}"
+    content_tag(:span, text, "data-#{status}-tickets" => count)
+  end
+
+  def daily_tickets(status)
+    count = Ticket.daily_tickets(status)
     text = "#{status.capitalize} tickets: #{count}"
     content_tag(:span, text, "data-#{status}-tickets" => count)
   end

@@ -3,13 +3,13 @@
     .btn-group.btn-group-justified{ :role => "group" }
       .btn-group{ :role => "group" }
         %button.btn.btn-default#open-tickets
-          = total_tickets('open')
+          = daily_tickets('open')
       .btn-group{ :role => "group" }
         %button.btn.btn-default#underway-tickets
-          = total_tickets('underway')
+          = daily_tickets('underway')
       .btn-group{ :role => "group" }
         %button.btn.btn-default#closed-tickets
-          = total_tickets('closed')
+          = daily_tickets('closed')
       .btn-group{ :role => "group" }
         %button.btn.btn-default#daily-turnover
           = daily_turnover

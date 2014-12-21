@@ -1,7 +1,7 @@
 $('#current-ticket').empty();
 $('#current-ticket-summary').empty();
 $('#current-tickets').html('<%= j render("current_tickets") %>');
-$('#underway-tickets').html('<%= total_tickets("underway") %>');
-$('#open-tickets').html('<%= total_tickets("open") %>');
+$('#underway-tickets').html('<%= daily_tickets("underway") %>');
+$('#open-tickets').html('<%= daily_tickets("open") %>');
 $('#delivery-button').css('visibility', 'hidden');
 // alert('<%= flash[:success] %>');

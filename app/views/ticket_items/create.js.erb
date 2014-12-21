@@ -5,6 +5,6 @@
 <% else %>
   $('#current-ticket').html('<%= j render("tickets/show_ticket") %>');
   $('#current-ticket-summary').html('<%= current_ticket_summary(@ticket) %>');
-  $('#open-tickets').html('<%= total_tickets("open") %>');
+  $('#open-tickets').html('<%= daily_tickets("open") %>');
   $('#delivery-button').css('visibility', 'visible').find('input').attr('value', '<%= @ticket.translate_delivery %>');
 <% end %>

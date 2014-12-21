@@ -1,7 +1,7 @@
 $('#daily-turnover').html('<%= daily_turnover %>');
-$('#underway-tickets').html('<%= total_tickets("underway") %>');
-$('#open-tickets').html('<%= total_tickets("open") %>');
-$('#closed-tickets').html('<%= total_tickets("closed") %>');
+$('#underway-tickets').html('<%= daily_tickets("underway") %>');
+$('#open-tickets').html('<%= daily_tickets("open") %>');
+$('#closed-tickets').html('<%= daily_tickets("closed") %>');
 <% if params[:status] != "closed" %>
   $('#delivery-button').css('visibility', 'visible').find('input').attr('value', '<%= @ticket.translate_delivery %>');
   $('#current-ticket-summary').html('<%= current_ticket_summary(@ticket) %>');
