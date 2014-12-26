@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141221210129) do
+ActiveRecord::Schema.define(version: 20141224143938) do
 
   create_table "categories", force: true do |t|
     t.string "name"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20141221210129) do
     t.boolean  "alcohol",                      default: true
     t.datetime "to_be_served_at"
     t.string   "delivery_address"
-    t.string   "created_by"
     t.string   "ordered_by"
     t.string   "status",                       default: "open"
     t.datetime "created_at"
@@ -53,9 +52,12 @@ ActiveRecord::Schema.define(version: 20141221210129) do
     t.datetime "closed_at"
     t.datetime "underwayed_at"
     t.integer  "todays_nr"
+    t.integer  "user_id"
   end
 
-  add_index "tickets", ["created_at", "created_by"], name: "index_tickets_on_created_at_and_created_by"
+  add_index "tickets", ["created_at", "user_id"], name: "index_tickets_on_created_at_and_user_id", unique: true
+  add_index "tickets", ["created_at"], name: "index_tickets_on_created_at", unique: true
+  add_index "tickets", ["user_id"], name: "index_tickets_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

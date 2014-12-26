@@ -2,15 +2,29 @@
   .col-lg-12{ :style => "padding: 0;" }
     .btn-toolbar{ :role => "toolbar" }
       .btn-group.btn-group-justified{ :role => "group"}
+
+        - if current_user.name == "asiak"
+          .btn-group{ :role => "group" }
+            %button.btn.btn-default
+              = link_to "Admin functions", admin_functions_path
+
         .btn-group{ :role => "group" }
           %button.btn.btn-default
-            = link_to "History", '#'
+            = "Logged in as #{current_user.name}"
+
+        .btn-group{ :role => "group" }
+          %button.btn.btn-default
+            - if logged_in?
+              = link_to "Log out", logout_path, method: :delete
+
+        .btn-group{ :role => "group" }
+          %button.btn.btn-default
+            = link_to "History", history_path
+
         .btn-group{ :role => "group" }
           %button.btn.btn-default
             = link_to "Clock", '#'
+
         .btn-group{ :role => "group" }
           %button.btn.btn-default
-            = link_to "Ongoing tickets", '#'
-        .btn-group{ :role => "group" }
-          %button.btn.btn-default
-            = link_to "Create new ticket", '#'
+            = link_to "Today's tickets", '#'

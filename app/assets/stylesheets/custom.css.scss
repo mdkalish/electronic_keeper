@@ -1,5 +1,5 @@
 body {
-  padding: 80px 20px 80px 140px;
+  padding: 80px 80px 80px 80px;
 }
 
 #delivery-button {
@@ -101,9 +101,62 @@ input {
   }
 }*/
 .footer {
-  background-color:#ffffff;
-  bottom:0;
-  position:fixed;
-  padding:10px;
+  background-color: #ffffff;
+  bottom: 0;
+  position: fixed;
+  padding: 10px;
 }
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+.history-table {
+  *border-collapse: collapse; /* IE7 and lower */
+  border-spacing: 0;
+  margin: 60px auto 60px auto;
+  & > thead {
+    background-color: #7BAFEF;
+    // border-spacing: collapse;
+    & > tr {
+      & > th:first-child {
+        border-radius: 35px 0 0 0;
+        -moz-border-radius: 35px 0 0 0;
+        -webkit-border-radius: 35px 0 0 0;
+      }
+      & > th:last-child {
+        -moz-border-radius: 0 35px 0 0;
+        -webkit-border-radius: 0 35px 0 0;
+        border-radius: 0 35px 0 0;
+      }
+    }
+  }
+  & > tbody > tr.bottom-row {
+    background-color: #7BAFEF;
+    & > td:first-child {
+      border-radius: 0 0 35px 35px;
+      border: none;
+      height: 35px;
+    }
+  }
+
+  td{
+    border: 1px solid #dddddd;
+  }
+}
+
+  .ticket-item{
+    background-color: #5BC25B;
+  }

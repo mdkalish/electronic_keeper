@@ -1,7 +1,7 @@
 module ApplicationHelper
 
-  def init_tickets
-    @tickets = Ticket.where("status = ?", "underway").to_a
+  def init_tickets(status)
+    @tickets = Ticket.where("status = ?", status).to_a
   end
 
   def init_ticket(status = "")

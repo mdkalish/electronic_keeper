@@ -1,0 +1,7 @@
+%h1= "Witaj Panie!"
+%h2= "Zaloguj sie bądź wykurw."
+%h3= "Błagaj admina o konto jeśli go nie masz."
+= link_to "Zaloguj się", login_path, class: "btn btn-primary"
+
+= link_to "Wykurw", '#', class: "btn btn-primary", :onclick => "alert('Wykurwił')"
+= debug(params) if Rails.env.development?

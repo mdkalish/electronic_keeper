@@ -20,5 +20,8 @@ module ElectronicKeeper
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # maciej:
+    # make timestamps in localtime (http://api.rubyonrails.org/classes/ActiveRecord/Timestamp.html)
+    config.active_record.default_timezone = :local
   end
 end

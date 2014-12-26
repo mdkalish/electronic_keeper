@@ -1,4 +1,5 @@
 class Ticket < ActiveRecord::Base
+  include ActionView::Helpers::DateHelper
   has_many :ticket_items, dependent: :destroy
   has_many :products, through: :ticket_items
   belongs_to :user
@@ -34,8 +35,13 @@ class Ticket < ActiveRecord::Base
     self.items_count = count_items
   end
 
+  def time_in_production
+    distance_of_time_in_words(self.underwayed_at, self.closed_at)
+  end
+
+
   def self.total_turnover
-    Ticket.where("status = ?", "closed").to_a.map(&:total_price).inject(0, :+)
+    Ticket.where("status = ?", "closed").map(&:total_price).inject(0, :+)
   end
 
   def self.daily_turnover
@@ -64,20 +70,5 @@ class Ticket < ActiveRecord::Base
   def self.how_many_today
     Ticket.where("DATE(created_at) = DATE(?)", Date.today).count
   end
-
-  # This method is scheduled with cron; check config/schedule.rb
-  def self.reset_todays_nr
-    @@todays_nr = nil
-  end
-
-  def self.set_todays_nr
-    # if @@todays_nr.nil?
-    if Ticket.last.created_at.to_date != Date.today or defined?(@@todays_nr).nil?
-      @@todays_nr = 1
-    else
-      @@todays_nr += 1
-    end
-  end
-
 
 end

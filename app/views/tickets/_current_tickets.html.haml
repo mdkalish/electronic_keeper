@@ -1,4 +1,4 @@
-- init_tickets
+- init_tickets("underway")
 - if @tickets.nil?
   = render plain: 'No tickets underway'
 - else
@@ -7,7 +7,7 @@
       %td
         = "#{ticket.id}(#{ticket.todays_nr})"
       %td
-        = ticket.status
+        = "#{ticket.status}/#{ticket.user.name}"
       %td
         = ticket.delivery == true ? "Na wynos" : "Na miejscu"
       %td

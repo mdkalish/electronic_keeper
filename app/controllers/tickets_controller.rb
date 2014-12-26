@@ -8,11 +8,12 @@ class TicketsController < ApplicationController
   end
 
   def index
+    # binding.pry
     @tickets = Ticket.all
-    respond_to do |format|
-      format.html { render html: "<h1>Check #{params[:controller]}.json</h1>".html_safe }
-      format.json { render json: @tickets } # root: false
-    end
+    # respond_to do |format|
+    #   format.html { render html: "<h1>Check #{params[:controller]}.json</h1>".html_safe }
+    #   format.json { render json: @tickets } # root: false
+    # end
   end
 
   def show
@@ -21,14 +22,12 @@ class TicketsController < ApplicationController
   end
 
   def create
-    # flash[:success] = "Ticket created!"
-    # binding.pry
     if @ticket.underwayed_at == nil
       @ticket.update(underwayed_at: Time.now)
     end
     @ticket.count_products != 0 ? @ticket.update(status: "underway") : @ticket.destroy
     @tickets = Ticket.find_all("underway")
-    reset_session
+    session[:ticket_id] = nil
     respond_to :js
   end
 
@@ -38,7 +37,8 @@ class TicketsController < ApplicationController
   end
 
   def edit
-    @ticket.update_attribute(:status, "underway") unless @ticket.count_products == 0
+    @ticket.update!(status: "underway") unless @ticket.count_products == 0
+    @ticket.update!(underwayed_at: Time.now.localtime) unless @ticket.underwayed_at != nil
     @ticket  = Ticket.find(params[:id])
     @tickets = Ticket.find_all("underway")
     session[:ticket_id] = @ticket.id
