@@ -2,10 +2,13 @@
 
 kasia_b:
   name: kasiab
+  password_digest: <%= User.digest('asd') %>
 
 bozena_w:
   name: bozenaw
+  password_digest: <%= User.digest('asd') %>
 
 joanna_k:
   name: asiak
+  password_digest: <%= User.digest('asd') %>
 
