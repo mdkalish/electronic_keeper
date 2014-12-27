@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   # protect_from_forgery with: :exception
   include SessionsHelper
+  before_action :require_login
 
   def initialize_ticket
     # binding.pry
@@ -23,5 +24,14 @@ class ApplicationController < ActionController::Base
   def initialize_current_tickets
     @tickets = Ticket.find_all("underway")
   end
+
+  private
+
+    def require_login
+      unless logged_in?
+        flash[:danger] = "You must be logged in to access this address."
+        redirect_to login_path # halts request cycle
+      end
+    end
 
 end
