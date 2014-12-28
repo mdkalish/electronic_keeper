@@ -18,6 +18,7 @@ gem 'pusher'
 gem 'active_model_serializers'
 gem 'whenever', :require => false
 gem 'bcrypt'
+gem 'prawn'
 group :development do
   gem 'spring'
   gem 'better_errors'

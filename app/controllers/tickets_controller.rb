@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+  require 'prawn'
   before_filter :initialize_ticket
   skip_before_action :verify_authenticity_token
   # respond_to :json, :js, :html
