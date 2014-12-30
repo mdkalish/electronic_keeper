@@ -19,7 +19,7 @@
 
         .btn-group{ :role => "group" }
           %button.btn.btn-default
-            - if request.env['REQUEST_URI'].split('/').include?("tickets")
+            - if request.env['REQUEST_URI'].include?("tickets")
               = link_to t('nav.dashboard'), dashboard_path
             - else
               = link_to t(:history), history_path
