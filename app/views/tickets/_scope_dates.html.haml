@@ -6,4 +6,4 @@
       - date = Date.today.advance(days: -i)
       = button_to date, history_path(date: date), method: :get
   %td
-    = button_to t('search.older'), '#', method: :get
+    = button_to t('search.older'), '#', method: :get, :onclick => "alert('Sorry, ta funkcja nie została jeszcze zaprogramowana.')"

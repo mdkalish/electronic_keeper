@@ -1,4 +1,5 @@
 pl:
+  not_programmed_yet: 'Ta funkcja nie została jeszcze zaprogramowana.'
   all_pizzas: 'Wszystkie pizze'
   name: 'Nazwa'
   price: 'Cena'
@@ -54,6 +55,7 @@ pl:
     closed: "zamknięte"
     tickets: "zamówienia"
   daily_turnover: "obrót dniowy"
+  no_search_results: "Żadne zamówienie nie spełnia podanych kryteriów."
   nav:
     dashboard: "Ekran Główny"
   search:
