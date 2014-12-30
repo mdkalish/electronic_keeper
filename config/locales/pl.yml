@@ -1,4 +1,13 @@
 pl:
+  flash:
+    you_must_be_logged_in: "Musisz być zalogowany, aby wejść na ten adres."
+    invalid_user_or_password: "Niepoprawna nazwa użytkownika lub hasło!"
+    logged_out_successfully: Wylogowano z powodzeniem. Stan wszystkich zamówień zmieniono na "zamknięte".
+  sessions:
+    please_log_in: "Zaloguj się"
+    name: 'Imię'
+    password: 'Hasło'
+    log_in: 'Zaloguj'
   not_programmed_yet: 'Ta funkcja nie została jeszcze zaprogramowana.'
   all_pizzas: 'Wszystkie pizze'
   name: 'Nazwa'

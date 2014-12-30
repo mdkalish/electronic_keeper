@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
 
     def require_login
       unless logged_in?
-        flash[:danger] = "You must be logged in to access this address."
+        flash[:danger] = t('flash.you_must_be_logged_in')
         redirect_to login_path # halts request cycle
       end
     end

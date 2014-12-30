@@ -20,6 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  flash:
+    you_must_be_logged_in: "You must be logged in to access this address."
+    invalid_user_or_password: "Invalid user name or password!"
+    logged_out_successfully: Logged out successfully. All tickets have been set to status "closed".
+  sessions:
+    please_log_in: "Log in"
+    name: 'Name'
+    password: 'Password'
+    log_in: 'Log in'
+  not_programmed_yet: 'This feature has not been programmed yet!'
   all_pizzas: 'All pizzas'
   name: 'Name'
   price: 'Price'

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to dashboard_path
     else
-      flash.now[:danger] = 'Invalid user or password!'
+      flash.now[:danger] = t('flash.invalid_user_or_password')
       render 'new'
     end
   end
@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
     current_user.tickets.where(status:"open").destroy_all
     current_user.tickets.update_all(status:"closed", closed_at: Time.now)
     session.destroy
-    flash[:success] = "Logged out successfully. All tickets have been set to status 'closed'."
+    flash[:success] = t('flash.logged_out_successfully')
     redirect_to login_path
   end
 
