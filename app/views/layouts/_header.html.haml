@@ -3,7 +3,7 @@
     .btn-toolbar{ :role => "toolbar" }
       .btn-group.btn-group-justified{ :role => "group"}
 
-        - if current_user.name == "asiak"
+        - if current_user.name == "Szefowa"
           .btn-group{ :role => "group" }
             %button.btn.btn-default
               = link_to t(:admin_functions), admin_functions_path
@@ -24,11 +24,6 @@
             - else
               = link_to t(:history), history_path
 
-
         .btn-group{ :role => "group" }
-          %button.btn.btn-default
-            = link_to "Clock", '#'
-
-        .btn-group{ :role => "group" }
-          %button.btn.btn-default
-            = link_to "Today's tickets", '#'
+          .btn.btn-default
+            #clock
