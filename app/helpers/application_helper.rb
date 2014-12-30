@@ -31,7 +31,7 @@ module ApplicationHelper
 
   def daily_turnover
     daily_turnover = Ticket.daily_turnover
-    text = "Daily turnover: #{daily_turnover}"
+    text = "#{t('daily_turnover').capitalize}: #{daily_turnover}"
     content_tag(:span, text, 'data-daily-turnover' => daily_turnover)
   end
 
@@ -43,7 +43,7 @@ module ApplicationHelper
 
   def daily_tickets(status)
     count = Ticket.daily_tickets(status)
-    text = "#{status.capitalize} tickets: #{count}"
+    text = t("ticket.#{status}").capitalize + " #{t('ticket.tickets')}: #{count}"
     content_tag(:span, text, "data-#{status}-tickets" => count)
   end
 

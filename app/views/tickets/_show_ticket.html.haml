@@ -1,6 +1,6 @@
 - if !@ticket
   - init_ticket('open')
-- @ticket.ticket_items.sort_by{ |ti| ti.created_at }.reverse.each do |item|
+- @ticket.ticket_items.sort_by{ |ti| ti.created_at }.each do |item|
   %tr
     %td
       = link_to image_tag("remove.png", size: '35x35'), update_ticket_item_path(:id => item.product.id, :decrement => true), method: :patch, remote: true

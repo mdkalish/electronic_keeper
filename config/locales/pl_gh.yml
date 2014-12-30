@@ -1,64 +1,4 @@
 pl:
-  all_pizzas: 'Wszystkie pizze'
-  name: 'Nazwa'
-  price: 'Cena'
-  ingredients: 'Składniki'
-  category: 'Kategoria'
-  actions: 'Akcje'
-  show_details: 'Pokaż szczegóły'
-  edit: 'Edytuj'
-  remove: 'Usuń'
-  you_sure: 'Jesteś pewien?'
-  admin_functions: 'Funkcje administracyjne'
-  logged_in_as: 'Zalogowano jako'
-  log_out: 'Wyloguj'
-  history: 'Historia'
-  no_tickets_underway: 'Brak zamówień w przygotowaniu'
-  delivery:
-    home: 'Na miejscu'
-    takeaway: 'Na wynos'
-  actions:
-    cancel: 'Odwołaj'
-    edit: 'Podgląd / Edycja'
-    close: 'Wydano'
-  button:
-    thats_all: 'To wszystko'
-  table:
-    header:
-      delete: 'Usuń'
-      product: 'Produkt'
-      unit_price: 'Cena za szt.'
-      amount: 'Ilość'
-      total_price: 'Cena w sumie'
-      order_nr: 'Nr dniowy'
-      status: 'Stan'
-      collection: 'Odbiór'
-      time_taken: 'Kiedy przyjęto'
-      sum_uniq: 'sum . uniq'
-      to_pay: 'Do zapłaty'
-      actions: 'Akcje'
-      date: 'Data'
-      todays_nr: 'Nr dniowy'
-      user_name: 'Przyjęte przez'
-      underwayed_at: 'Rozpoczęto przygotowanie'
-      closed_at: 'Zakończono przygotowanie'
-      served_after: 'Czas w przygotowaniu'
-      to_be_served_at: 'Zamówiono na (data/godzina)'
-      delivery: 'Dostawa'
-      amount_x_unit_price: 'Ilość x cena za szt.'
-    data:
-      not_yet_closed: 'Jeszcze nie wydano'
-  ticket:
-    underway: "w przygotowaniu"
-    open: "otwarte"
-    closed: "zamknięte"
-    tickets: "zamówienia"
-  daily_turnover: "obrót dniowy"
-  nav:
-    dashboard: "Ekran Główny"
-  search:
-    all: "Wszystkie"
-    older: "Starsze"
   date:
     abbr_day_names:
     - nie
@@ -205,7 +145,7 @@ pl:
       too_long:
         few: jest za długie (maksymalnie %{count} znaki)
         many: jest za długie (maksymalnie %{count} znaków)
-        one: jest za długie (maksymalnie jeden znak)
+        one: jest za długie (maksymalnie jeden znak) 
         other: jest za długie (maksymalnie %{count} znaków)
       too_short:
         few: jest za krótkie (przynajmniej %{count} znaki)

@@ -4,13 +4,14 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
   include SessionsHelper
   before_action :require_login
+  before_action :set_locale
 
   def initialize_ticket
-    # binding.pry
     @ticket = current_user.tickets.find_by_id(session[:ticket_id])
     if @ticket.nil?
       @ticket = current_user.tickets.find_by_status("open") || current_user.tickets.create!
       session[:ticket_id] = @ticket.id
+      # binding.pry
       @ticket.update!(todays_nr: Ticket.how_many_today) if @ticket.todays_nr == nil
     end
   end
@@ -24,6 +25,14 @@ class ApplicationController < ActionController::Base
   def initialize_current_tickets
     @tickets = Ticket.find_all("underway")
   end
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  # def default_url_options
+  #   { I18n.locale => :pl }
+  # end
 
   private
 

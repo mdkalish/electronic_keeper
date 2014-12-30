@@ -23,5 +23,6 @@ module ElectronicKeeper
     # maciej:
     # make timestamps in localtime (http://api.rubyonrails.org/classes/ActiveRecord/Timestamp.html)
     config.active_record.default_timezone = :local
+    I18n.default_locale = :pl
   end
 end

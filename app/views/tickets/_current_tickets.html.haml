@@ -1,24 +1,22 @@
 - init_tickets("underway")
-- if @tickets.nil?
-  = render plain: 'No tickets underway'
-- else
+- if not @tickets.empty?
   - @tickets.each do |ticket|
     %tr{:id => ticket.id }
       %td
-        = "#{ticket.id}(#{ticket.todays_nr})"
+        = ticket.todays_nr
       %td
-        = "#{ticket.status}/#{ticket.user.name}"
+        = t('ticket.' + ticket.status)
       %td
-        = ticket.delivery == true ? "Na wynos" : "Na miejscu"
+        = ticket.delivery == true ? t('delivery.takeaway') : t('delivery.home')
       %td
-        = "#{ticket.created_at.localtime.strftime('%H:%M')} (#{time_ago_in_words(ticket.created_at)} ago)"
+        = "#{ticket.created_at.localtime.strftime('%H:%M')} (#{time_ago_in_words(ticket.created_at)})"
       %td
         = "#{ticket.items_count} / #{ticket.products.count}"
       %td
         = convert_to_pln(ticket.total_price)
       %td
-        = link_to "Anuluj", cancel_ticket_path(:id => ticket.id), method: :delete, :onclick => "$(this).closest('tr').remove();", remote: true
+        = link_to t('actions.cancel'), cancel_ticket_path(:id => ticket.id), method: :delete, :onclick => "$(this).closest('tr').remove();", remote: true
       %td
-        = link_to "Podgląd / Edycja", edit_ticket_path(:id => ticket.id), :remote => true
+        = link_to t('actions.edit'), edit_ticket_path(:id => ticket.id), :remote => true
       %td
-        = link_to "Zamknij", update_ticket_path(:id => ticket.id, :status => "closed"), :data => { status: "closed"}, method: :post, :onclick => "$(this).closest('tr').remove()", :remote => true
+        = link_to t('actions.close'), update_ticket_path(:id => ticket.id, :status => "closed"), :data => { status: "closed"}, method: :post, :onclick => "$(this).closest('tr').remove()", :remote => true

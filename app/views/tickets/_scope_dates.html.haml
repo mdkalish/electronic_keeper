@@ -1,0 +1,9 @@
+%table.tbody.tr#scope_dates_bar
+  %td
+    = button_to t('search.all'), history_path, method: :get
+  - for i in 0..7 do
+    %td
+      - date = Date.today.advance(days: -i)
+      = button_to date, history_path(date: date), method: :get
+  %td
+    = button_to t('search.older'), '#', method: :get

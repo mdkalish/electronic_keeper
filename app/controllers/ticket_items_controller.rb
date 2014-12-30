@@ -1,5 +1,6 @@
 class TicketItemsController < ApplicationController
-  before_filter :initialize_ticket, :initialize_ticket_item
+  before_filter :initialize_ticket
+  before_filter :initialize_ticket_item
 
   def create
     # binding.pry

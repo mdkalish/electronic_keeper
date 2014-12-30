@@ -10,27 +10,27 @@
     .current-tickets
       .btn-group.pull-right
         .btn#delivery-button
-          = button_to 'Na wynos', update_ticket_path(:delivery => "toggle"), remote: true
+          = button_to t('delivery.takeaway'), update_ticket_path(:delivery => "toggle"), remote: true
         .btn
-          = button_to 'To wszystko', create_ticket_path, remote: true
+          = button_to t('button.thats_all'), create_ticket_path, remote: true
       #current-ticket-summary
       %table.table.table-hover.table-bordered
-        %th.col-lg-1= "Usuń"
-        %th.col-lg-5= "Produkt"
-        %th.col-lg-2= "Cena za szt."
-        %th.col-lg-2= "Ilość"
-        %th.col-lg-2= "Cena w sumie"
+        %th.col-lg-1= t('table.header.delete')
+        %th.col-lg-5= t('table.header.product')
+        %th.col-lg-2= t('table.header.unit_price')
+        %th.col-lg-2= t('table.header.amount')
+        %th.col-lg-2= t('table.header.total_price')
         %tbody#current-ticket
           = render 'tickets/show_ticket'
     .current-tickets
       %table.table.table-hover.table-bordered
-        %th.col-lg-1= "Nr zamówienia"
-        %th.col-lg-1= "Status"
-        %th.col-lg-2= "Odbiór"
-        %th.col-lg-2= "Kiedy przyjęto"
-        %th.col-lg-1= "sum / uniq"
-        %th.col-lg-1= "Kwota"
-        %th.col-lg-3{:colspan => "3"}= "Akcje"
+        %th.col-lg-1= t('table.header.order_nr')
+        %th.col-lg-1= t('table.header.status')
+        %th.col-lg-2= t('table.header.collection')
+        %th.col-lg-2= t('table.header.time_taken')
+        %th.col-lg-1= t('table.header.sum_uniq')
+        %th.col-lg-1= t('table.header.to_pay')
+        %th.col-lg-3{:colspan => "3"}= t('table.header.actions')
         %tbody#current-tickets
           = render 'tickets/current_tickets'
 

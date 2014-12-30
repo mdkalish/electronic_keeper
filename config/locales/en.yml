@@ -30,4 +30,45 @@ en:
   edit: 'Edit'
   remove: 'Remove'
   you_sure: 'You sure?'
-
+  admin_functions: 'Admin functions'
+  logged_in_as: 'Logged in as'
+  log_out: 'Log out'
+  history: 'History'
+  no_tickets_underway:
+  delivery:
+    home:
+    takeaway:
+  actions:
+    cancel:
+    edit:
+    close:
+  button:
+    thats_all:
+  table:
+    header:
+      delete:
+      product:
+      unit_price:
+      amount: "Items Count"
+      total_price: "Total Price"
+      order_nr:
+      status: "Status"
+      collection:
+      time_taken:
+      sum_uniq:
+      to_pay:
+      actions:
+      date: "Date(ID)"
+      todays_nr: "Todays Nr"
+      user_name: "User Name"
+      underwayed_at: "Underwayed At"
+      closed_at: "Closed At"
+      served_after: "Served After"
+      to_be_served_at: "To Be Served At"
+      delivery: "Delivery"
+  ticket:
+    underway:
+    open:
+    closed:
+    tickets:
+  daily_turnover:

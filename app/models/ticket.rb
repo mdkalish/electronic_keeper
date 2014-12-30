@@ -6,6 +6,8 @@ class Ticket < ActiveRecord::Base
   before_save :update_values
   accepts_nested_attributes_for :products
 
+  scope :all_by_date, -> (date) { where("DATE(created_at) = DATE(?)", date) }
+
   def toggle
     if delivery == true
       update_attribute(:delivery, false)

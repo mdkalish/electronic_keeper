@@ -1,5 +1,4 @@
 class TicketsController < ApplicationController
-  require 'prawn'
   before_filter :initialize_ticket
   skip_before_action :verify_authenticity_token
   # respond_to :json, :js, :html
@@ -10,7 +9,10 @@ class TicketsController < ApplicationController
 
   def index
     # binding.pry
-    @tickets = Ticket.all
+    @tickets = Ticket.where("status != ?", "open")
+    if params[:date]
+      @tickets = @tickets.all_by_date(params[:date])
+    end
     # respond_to do |format|
     #   format.html { render html: "<h1>Check #{params[:controller]}.json</h1>".html_safe }
     #   format.json { render json: @tickets } # root: false
