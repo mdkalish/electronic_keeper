@@ -3,8 +3,8 @@ class CreateDeliveryAddresses < ActiveRecord::Migration
     create_table :delivery_addresses do |t|
       t.string    :city, null: false
       t.string    :street, index: true
-      t.string    :flat_number
-      t.integer   :house_number, null: false
+      t.string    :house_number, null: false
+      t.integer   :flat_number
       t.integer   :distance_by_car, null: true
       t.integer   :distance, null: true
       t.decimal   :longitude, :precision => 10 ,:scale => 7, null: true
