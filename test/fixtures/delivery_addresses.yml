@@ -1,11 +1,35 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+polna_5_ornontowice:
+  city: Ornontowice
+  street: Polna
+  house_number: 5
+  flat_number:
+  distance_by_car: 2200
+  distance:
+  longitude:
+  latitude:
+  created_at: <%= Time.now.localtime %>
+  updated_at: <%= Time.now.localtime %>
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+zbozowa_7c_bujakow:
+  city: Bujaków
+  street: Zbożowa
+  house_number: 7C
+  flat_number: 4
+  distance_by_car: 4300
+  distance:
+  longitude:
+  latitude:
+  created_at: <%= Time.now.localtime %>
+  updated_at: <%= Time.now.localtime %>
+
+generala_j_zietka_14_jaskowice:
+  city: Jaśkowice
+  street: Generała J. Ziętka
+  house_number: 14
+  flat_number:
+  distance_by_car: 2900
+  distance:
+  longitude:
+  latitude:
+  created_at: <%= Time.now.localtime %>
+  updated_at: <%= Time.now.localtime %>

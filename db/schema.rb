@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150102144151) do
+ActiveRecord::Schema.define(version: 20150102173151) do
 
   create_table "categories", force: true do |t|
     t.string "name"
@@ -30,11 +30,19 @@ ActiveRecord::Schema.define(version: 20150102144151) do
 
   add_index "customers", ["first_name", "last_name"], name: "index_customers_on_first_name_and_last_name"
 
+  create_table "customers_delivery_addresses", id: false, force: true do |t|
+    t.integer "delivery_address_id"
+    t.integer "customer_id"
+  end
+
+  add_index "customers_delivery_addresses", ["customer_id"], name: "index_customers_delivery_addresses_on_customer_id"
+  add_index "customers_delivery_addresses", ["delivery_address_id"], name: "index_customers_delivery_addresses_on_delivery_address_id"
+
   create_table "delivery_addresses", force: true do |t|
     t.string   "city",                                     null: false
     t.string   "street"
-    t.string   "flat_number"
-    t.integer  "house_number",                             null: false
+    t.integer  "flat_number"
+    t.string   "house_number",                             null: false
     t.integer  "distance_by_car"
     t.integer  "distance"
     t.decimal  "longitude",       precision: 10, scale: 7
@@ -44,14 +52,6 @@ ActiveRecord::Schema.define(version: 20150102144151) do
   end
 
   add_index "delivery_addresses", ["city", "street"], name: "index_delivery_addresses_on_city_and_street"
-
-  create_table "delivery_addresses_customers", id: false, force: true do |t|
-    t.integer "delivery_addresses_id"
-    t.integer "customer_id"
-  end
-
-  add_index "delivery_addresses_customers", ["customer_id"], name: "index_delivery_addresses_customers_on_customer_id"
-  add_index "delivery_addresses_customers", ["delivery_addresses_id"], name: "index_delivery_addresses_customers_on_delivery_addresses_id"
 
   create_table "products", force: true do |t|
     t.string  "name"
@@ -74,15 +74,15 @@ ActiveRecord::Schema.define(version: 20150102144151) do
   end
 
   create_table "tickets", force: true do |t|
-    t.decimal  "total_price",                  default: 0.0
-    t.integer  "items_count",                  default: 0
-    t.boolean  "alcohol",                      default: true
+    t.decimal  "total_price",      default: 0.0
+    t.integer  "items_count",      default: 0
+    t.boolean  "alcohol",          default: true
     t.datetime "to_be_served_at"
     t.string   "delivery_address"
     t.string   "ordered_by"
-    t.string   "status",                       default: "open"
+    t.string   "status",           default: "open"
     t.datetime "created_at"
-    t.boolean  "delivery",         limit: 255, default: false
+    t.boolean  "delivery",         default: false
     t.datetime "closed_at"
     t.datetime "underwayed_at"
     t.integer  "todays_nr"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 20150102144151) do
 
   add_index "tickets", ["created_at", "user_id"], name: "index_tickets_on_created_at_and_user_id", unique: true
   add_index "tickets", ["created_at"], name: "index_tickets_on_created_at", unique: true
+  add_index "tickets", ["created_at"], name: "index_tickets_on_created_at_and_created_by"
   add_index "tickets", ["user_id"], name: "index_tickets_on_user_id"
 
   create_table "users", force: true do |t|

@@ -1,11 +1,29 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+customer_1:
+  id: 1
+  first_name: Andrzej
+  last_name: Nowak
+  phone_number_1: 666555444
+  phone_number_2: 32124132543
+  created_at: <%= Time.now.localtime %>
+  updated_at: <%= Time.now.localtime %>
+  delivery_addresses: polna_5_ornontowice, generala_j_zietka_14_jaskowice
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+customer_2:
+  id: 2
+  first_name: Michał
+  last_name: Kowalskij
+  phone_number_1: 123456789
+  phone_number_2: 004825823598
+  created_at: <%= Time.now.localtime %>
+  updated_at: <%= Time.now.localtime %>
+  delivery_addresses: zbozowa_7c_bujakow
+
+customer_3:
+  id: 3
+  first_name: Nikola
+  last_name: Bolszoj
+  phone_number_1: 0023313535235
+  phone_number_2:
+  created_at: <%= Time.now.localtime %>
+  updated_at: <%= Time.now.localtime %>
+  delivery_addresses:
