@@ -47,4 +47,14 @@ module ApplicationHelper
     content_tag(:span, text, "data-#{status}-tickets" => count)
   end
 
+  def ticket_search_summary(tickets, date)
+    date = t('search.all') unless !date.nil?
+    tss = Ticket.search_summary(tickets, date)
+    total_items = tss[1]
+    tickets_per_user_hash = tss[2]
+    t('search.summary', total_price: number_to_currency(tss[0]),
+                        total_tickets_in_search: tss[3],
+                        date: date)
+  end
+
 end

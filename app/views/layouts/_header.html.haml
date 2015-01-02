@@ -3,7 +3,7 @@
     .btn-toolbar{ :role => "toolbar" }
       .btn-group.btn-group-justified{ :role => "group"}
 
-        - if current_user.name == "Szefowa"
+        - if current_user.name == "Szefowa" && Rails.env == "development"
           .btn-group{ :role => "group" }
             %button.btn.btn-default
               = link_to t(:admin_functions), admin_functions_path

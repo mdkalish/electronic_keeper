@@ -9,7 +9,7 @@
       %td
         = ticket.delivery == true ? t('delivery.takeaway') : t('delivery.home')
       %td
-        = "#{ticket.created_at.localtime.strftime('%H:%M')} (#{time_ago_in_words(ticket.created_at)})"
+        = "#{ticket.underwayed_at.localtime.strftime('%H:%M')} (#{time_ago_in_words(ticket.underwayed_at)})"
       %td
         = "#{ticket.items_count} / #{ticket.products.count}"
       %td

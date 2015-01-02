@@ -18,4 +18,8 @@ $(document).ready(function(){
   }
 
   startTime();
+
+  // function changeElemsVisibility(e, visibility){
+  //   e.css({'visibility': visibility});
+  // }
 });

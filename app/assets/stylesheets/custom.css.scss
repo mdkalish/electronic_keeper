@@ -6,6 +6,10 @@ body {
   visibility: hidden;
 }
 
+#address-button {
+  visibility: hidden;
+}
+
 input {
   padding: 30px;
   font-size: 16px;
@@ -33,6 +37,10 @@ input {
 
 .btn.btn-default {
   border-radius: 0;
+}
+
+.navbar.navbar-default.navbar-fixed-top {
+  background-color: #5BC25B;
 }
 
 /**/
@@ -175,4 +183,16 @@ input {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+}
+
+#search-results {
+  margin-top: 150px;
+}
+
+#search-summary {
+  border: 1px solid black;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(206, 240, 247);
+  // padding: 20px;
 }

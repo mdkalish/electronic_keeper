@@ -17,15 +17,15 @@ class Ticket < ActiveRecord::Base
   end
 
   def translate_delivery
-    delivery == true ? "Na wynos" : "Na miejscu"
+    delivery == true ? I18n.t('delivery.takeaway') : I18n.t('delivery.home')
   end
 
   def calculate_total_price
-    ticket_items.map(&:price).inject(0, :+)
+    ticket_items.pluck(:price).inject(0, :+)
   end
 
   def count_items
-    ticket_items.map(&:amount).inject(0, :+)
+    ticket_items.pluck(:amount).inject(0, :+)
   end
 
   def count_products
@@ -41,21 +41,29 @@ class Ticket < ActiveRecord::Base
     distance_of_time_in_words(self.underwayed_at, self.closed_at)
   end
 
+  def self.search_summary(tickets, date = '')
+    total_price = tickets.pluck(:total_price).inject(0, :+)
+    total_items = tickets.pluck(:items_count).inject(0, :+)
+    tickets_per_user_hash = User.count_tickets_per_user(date)
+    # binding.pry
+    total_tickets_in_search = tickets_per_user_hash.values.sum
+    [total_price, total_items, tickets_per_user_hash, total_tickets_in_search]
+  end
 
   def self.total_turnover
-    Ticket.where("status = ?", "closed").map(&:total_price).inject(0, :+)
+    where("status = ?", "closed").pluck(:total_price).inject(0, :+)
   end
 
   def self.daily_turnover
-    Ticket.where("DATE(created_at) = DATE(:date) and status = :status", { date: Date.today, status: "closed" }).map(&:total_price).inject(0, :+)
+    where("DATE(created_at) = DATE(:date) and status = :status", { date: Date.today, status: "closed" }).pluck(:total_price).inject(0, :+)
   end
 
   def self.total_tickets(status)
-    Ticket.where("status = ?", status).count
+    where("status = ?", status).count
   end
 
   def self.daily_tickets(status)
-    Ticket.where("DATE(created_at) = DATE(?)", Date.today).where(status: status).count
+    where("DATE(created_at) = DATE(?)", Date.today).where(status: status).count
   end
 
   def self.tickets_summary
@@ -66,11 +74,11 @@ class Ticket < ActiveRecord::Base
   end
 
   def self.find_all(status)
-    Ticket.where("status = ?", status).to_a
+    where("status = ?", status).to_a
   end
 
   def self.how_many_today
-    Ticket.where("DATE(created_at) = DATE(?)", Date.today).count
+    where("DATE(created_at) = DATE(?)", Date.today).count
   end
 
 end

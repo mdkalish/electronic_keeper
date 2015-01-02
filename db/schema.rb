@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141224143938) do
+ActiveRecord::Schema.define(version: 20150102121227) do
 
   create_table "categories", force: true do |t|
     t.string "name"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20141224143938) do
     t.string   "ordered_by"
     t.string   "status",                       default: "open"
     t.datetime "created_at"
-    t.boolean  "delivery",         limit: 255, default: true
+    t.boolean  "delivery",         limit: 255, default: false
     t.datetime "closed_at"
     t.datetime "underwayed_at"
     t.integer  "todays_nr"

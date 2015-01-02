@@ -7,3 +7,6 @@
       = button_to date, history_path(date: date), method: :get
   %td
     = button_to t('search.older'), '#', method: :get, :onclick => "alert('Sorry, ta funkcja nie została jeszcze zaprogramowana.')"
+  %tr
+    %td#search-summary
+      %h2{:style => 'text-align: center;'}= ticket_search_summary(@tickets, params[:date])

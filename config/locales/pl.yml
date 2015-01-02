@@ -27,6 +27,7 @@ pl:
   delivery:
     home: 'Na miejscu'
     takeaway: 'Na wynos'
+    give_address: 'Podaj adres dostawy'
   actions:
     cancel: 'Odwołaj'
     edit: 'Podgląd / Edycja'
@@ -70,6 +71,12 @@ pl:
   search:
     all: "Wszystkie"
     older: "Starsze"
+    results: "Wyniki wyszukiwania: "
+    turnover: "Obrót:"
+    total_items: "W sumie przygotowanych rzeczy"
+    tickets_by_user: "W tym wg pracownika"
+    total_tickets: "W sumie znaleziono"
+    summary: "Data: %{date} | Liczba znalezionych zamówień: %{total_tickets_in_search} | Kwota łączna: %{total_price} [szczegóły]"
   date:
     abbr_day_names:
     - nie

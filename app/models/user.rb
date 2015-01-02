@@ -15,4 +15,17 @@ class User < ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
   end
 
+  def self.count_tickets_per_user(date = '')
+    tickets_per_user = {}
+    # binding.pry
+    all.each do |u|
+      if date.nil? or date.empty? or date == I18n.t('search.all')
+        tickets_per_user[u.name] = u.tickets.count
+      elsif !date.empty?
+        tickets_per_user[u.name] = u.tickets.where("DATE(created_at) = DATE(?)", date).count
+      end
+    end
+    tickets_per_user
+  end
+
 end
