@@ -9,8 +9,9 @@
   #main-wrapper.col-lg-6
     .current-tickets
       .btn-group.pull-right
-        .btn#address-button
-          = button_to t('delivery.give_address')
+        - if Rails.env == "development"
+          .btn#address-button
+            = button_to t('delivery.give_address')
         .btn#delivery-button
           = button_to t('delivery.takeaway'), update_ticket_path(:delivery => "toggle"), remote: true
         .btn
