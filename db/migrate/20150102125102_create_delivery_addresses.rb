@@ -4,7 +4,7 @@ class CreateDeliveryAddresses < ActiveRecord::Migration
       t.string    :city, null: false
       t.string    :street, index: true
       t.string    :house_number, null: false
-      t.integer   :flat_number
+      t.string    :flat_number
       t.integer   :distance_by_car, null: true
       t.integer   :distance, null: true
       t.decimal   :longitude, :precision => 10 ,:scale => 7, null: true

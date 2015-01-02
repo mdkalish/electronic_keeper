@@ -22,13 +22,14 @@ ActiveRecord::Schema.define(version: 20150102173151) do
   create_table "customers", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "phone_number_1", null: false
-    t.integer  "phone_number_2"
+    t.string   "phone_number_1", null: false
+    t.string   "phone_number_2"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "customers", ["first_name", "last_name"], name: "index_customers_on_first_name_and_last_name"
+  add_index "customers", ["phone_number_1"], name: "index_customers_on_phone_number_1"
 
   create_table "customers_delivery_addresses", id: false, force: true do |t|
     t.integer "delivery_address_id"
@@ -41,8 +42,8 @@ ActiveRecord::Schema.define(version: 20150102173151) do
   create_table "delivery_addresses", force: true do |t|
     t.string   "city",                                     null: false
     t.string   "street"
-    t.integer  "flat_number"
     t.string   "house_number",                             null: false
+    t.string   "flat_number"
     t.integer  "distance_by_car"
     t.integer  "distance"
     t.decimal  "longitude",       precision: 10, scale: 7
