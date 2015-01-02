@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  belongs_to :category
+  belongs_to :category, inverse_of: :products
   has_many :ticket_items
   has_many :tickets, through: :ticket_items
   validates :price, presence: true
