@@ -11,13 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150102121227) do
+ActiveRecord::Schema.define(version: 20150102125102) do
 
   create_table "categories", force: true do |t|
     t.string "name"
   end
 
   add_index "categories", ["name"], name: "index_categories_on_name", unique: true
+
+  create_table "delivery_addresses", force: true do |t|
+    t.string   "city",                                     null: false
+    t.string   "street"
+    t.string   "flat_number"
+    t.integer  "house_number",                             null: false
+    t.integer  "distance_by_car"
+    t.integer  "distance"
+    t.decimal  "longitude",       precision: 10, scale: 7
+    t.decimal  "latitude",        precision: 10, scale: 7
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delivery_addresses", ["city", "street"], name: "index_delivery_addresses_on_city_and_street"
 
   create_table "products", force: true do |t|
     t.string  "name"
