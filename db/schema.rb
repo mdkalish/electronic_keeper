@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150102125102) do
+ActiveRecord::Schema.define(version: 20150102142957) do
 
   create_table "categories", force: true do |t|
     t.string "name"
   end
 
   add_index "categories", ["name"], name: "index_categories_on_name", unique: true
+
+  create_table "customers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "phone_number_1", null: false
+    t.integer  "phone_number_2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "customers", ["first_name", "last_name"], name: "index_customers_on_first_name_and_last_name"
 
   create_table "delivery_addresses", force: true do |t|
     t.string   "city",                                     null: false
