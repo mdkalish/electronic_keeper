@@ -1,14 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-kasia_b:
-  name: kasiab
+kasia_baluch:
+  name: Kasia Baluch
   password_digest: <%= User.digest('asd') %>
 
-bozena_w:
-  name: bozenaw
+bozena_wojnarowska:
+  name: Bożena Wojnarowska
   password_digest: <%= User.digest('asd') %>
 
-joanna_k:
-  name: asiak
+joanna_kalisz:
+  name: Szefowa
   password_digest: <%= User.digest('asd') %>
 

@@ -165,9 +165,9 @@ input {
   }
 }
 
-  .ticket-item{
-    background-color: #5BC25B;
-  }
+.ticket-item{
+  background-color: #5BC25B;
+}
 
 /* search history */
 
@@ -195,4 +195,11 @@ input {
   width: 100%;
   background-color: rgb(206, 240, 247);
   // padding: 20px;
+}
+
+#current-ticket-summary {
+  padding: 0 20px;
+  background-color: #5BC25B;
+  width: 33%;
+  text-align: center;
 }

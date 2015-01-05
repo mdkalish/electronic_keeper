@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
       @ticket = current_user.tickets.find_by_status("open") || current_user.tickets.create!
       session[:ticket_id] = @ticket.id
       # binding.pry
-      @ticket.update!(todays_nr: Ticket.how_many_today) if @ticket.todays_nr == nil
+      @ticket.update!(todays_nr: Ticket.how_many_today + 1) if @ticket.todays_nr == nil
     end
   end
 
