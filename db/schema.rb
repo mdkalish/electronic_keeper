@@ -91,9 +91,7 @@ ActiveRecord::Schema.define(version: 20150102210357) do
     t.integer  "customer_id"
   end
 
-  add_index "tickets", ["created_at", "user_id"], name: "index_tickets_on_created_at_and_user_id", unique: true
-  add_index "tickets", ["created_at"], name: "index_tickets_on_created_at", unique: true
-  add_index "tickets", ["created_at"], name: "index_tickets_on_created_at_and_created_by"
+  add_index "tickets", ["created_at"], name: "index_tickets_on_created_at"
   add_index "tickets", ["customer_id"], name: "index_tickets_on_customer_id"
   add_index "tickets", ["user_id"], name: "index_tickets_on_user_id"
 
