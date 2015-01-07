@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150102210357) do
+ActiveRecord::Schema.define(version: 20150106174717) do
 
   create_table "categories", force: true do |t|
     t.string "name"
@@ -75,24 +75,25 @@ ActiveRecord::Schema.define(version: 20150102210357) do
   end
 
   create_table "tickets", force: true do |t|
-    t.decimal  "total_price",      default: 0.0
-    t.integer  "items_count",      default: 0
-    t.boolean  "alcohol",          default: true
+    t.decimal  "total_price",         default: 0.0
+    t.integer  "items_count",         default: 0
+    t.boolean  "alcohol",             default: true
     t.datetime "to_be_served_at"
-    t.string   "delivery_address"
     t.string   "ordered_by"
-    t.string   "status",           default: "open"
+    t.string   "status",              default: "open"
     t.datetime "created_at"
-    t.boolean  "delivery",         default: false
+    t.boolean  "delivery",            default: false
     t.datetime "closed_at"
     t.datetime "underwayed_at"
     t.integer  "todays_nr"
     t.integer  "user_id"
     t.integer  "customer_id"
+    t.integer  "delivery_address_id"
   end
 
   add_index "tickets", ["created_at"], name: "index_tickets_on_created_at"
   add_index "tickets", ["customer_id"], name: "index_tickets_on_customer_id"
+  add_index "tickets", ["delivery_address_id"], name: "index_tickets_on_delivery_address_id"
   add_index "tickets", ["user_id"], name: "index_tickets_on_user_id"
 
   create_table "users", force: true do |t|

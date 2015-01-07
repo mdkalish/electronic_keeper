@@ -4,9 +4,10 @@ class Ticket < ActiveRecord::Base
   has_many :products, through: :ticket_items
   belongs_to :user
   belongs_to :customer
-  # has_one :delivery_address OR leave it to associations?
+  has_one :delivery_address
   before_save :update_values
-  accepts_nested_attributes_for :products
+  accepts_nested_attributes_for :products, :delivery_address
+
 
   scope :all_by_date, -> (date) { where("DATE(created_at) = DATE(?)", date) }
 

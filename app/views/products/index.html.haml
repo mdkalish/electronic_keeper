@@ -1,5 +1,5 @@
 #wrapper
-  #sidebar-wrapper.col-lg-1
+  %aside#sidebar-wrapper.col-lg-1
     #sidebar{ :style => "overflow-y: auto;"}
       .nav.list-group#left-sidebar
         = render 'layouts/left_sidebar'
@@ -9,9 +9,8 @@
   #main-wrapper.col-lg-6
     .current-tickets
       .btn-group.pull-right
-        - if Rails.env == "development"
-          .btn#address-button
-            = button_to t('delivery.give_address')
+        .btn#address-button
+          = button_to t('delivery.give_address'), new_delivery_address_path, method: :get, remote: true
         .btn#delivery-button
           = button_to t('delivery.takeaway'), update_ticket_path(:delivery => "toggle"), remote: true
         .btn

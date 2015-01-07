@@ -1,0 +1,21 @@
+.row.col-lg-12#wrap
+  %h1{:style => 'text-align: center;'}= "Wpisz adres dostawy"
+
+  = form_for @delivery_address, remote: true do |f|
+
+    = label_tag :phone_number, "Numer telefonu"
+    = text_field_tag :phone_number, params[:phone_number], class: "keyboard"
+
+    = f.label :city, "Miasto"
+    = f.text_field :city, class: "keyboard"
+
+    = f.label :street, "Ulica"
+    = f.text_field :street, class: "keyboard"
+
+    = f.label :house_number, "Numer domu"
+    = f.text_field :house_number, class: "keyboard"
+
+    = f.label :flat_number, "Numer mieszkania"
+    = f.text_field :flat_number, class: "keyboard"
+
+    = f.submit "Submit"

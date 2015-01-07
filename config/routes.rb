@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
     get       '/admin_functions'    => 'nav_pages#admin_functions'
     get       '/home'               => 'nav_pages#home'
-    resources :users
+    resources :users, :delivery_addresses
   end
 
 

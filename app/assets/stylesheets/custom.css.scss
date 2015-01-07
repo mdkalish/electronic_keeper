@@ -1,3 +1,6 @@
+$light-blue: #7BAFEF;
+$light-green: #5BC25B;
+
 body {
   padding: 80px 80px 80px 80px;
 }
@@ -40,7 +43,7 @@ input {
 }
 
 .navbar.navbar-default.navbar-fixed-top {
-  background-color: #5BC25B;
+  background-color: $light-green;
 }
 
 /**/
@@ -136,7 +139,7 @@ input {
   border-spacing: 0;
   margin: 60px auto 60px auto;
   & > thead {
-    background-color: #7BAFEF;
+    background-color: $light-blue;
     // border-spacing: collapse;
     & > tr {
       & > th:first-child {
@@ -152,7 +155,7 @@ input {
     }
   }
   & > tbody > tr.bottom-row {
-    background-color: #7BAFEF;
+    background-color: $light-blue;
     & > td:first-child {
       border-radius: 0 0 35px 35px;
       border: none;
@@ -166,7 +169,7 @@ input {
 }
 
 .ticket-item{
-  background-color: #5BC25B;
+  background-color: $light-green;
 }
 
 /* search history */
@@ -198,8 +201,10 @@ input {
 }
 
 #current-ticket-summary {
+  margin: 10px;
   padding: 0 20px;
-  background-color: #5BC25B;
+  font-size: 20px;
+  background-color: $light-blue;
   width: 33%;
   text-align: center;
 }

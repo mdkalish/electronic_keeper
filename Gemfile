@@ -19,6 +19,7 @@ gem 'active_model_serializers'
 gem 'whenever', :require => false
 gem 'bcrypt'
 gem 'prawn'
+gem 'jquery-ui-rails'
 group :development do
   gem 'spring'
   gem 'better_errors'

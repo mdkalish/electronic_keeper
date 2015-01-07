@@ -26,7 +26,7 @@ module ApplicationHelper
     price = convert_to_pln(ticket.calculate_total_price)
     text = "Zamówienie nr #{id}:<br />#{ticket.count_items} rzeczy za #{price.to_f}".html_safe
     # binding.pry
-    content_tag(:h3, text, :id => id, 'data-ticket-price' => price)
+    content_tag(:p, text, :id => id, 'data-ticket-price' => price)
   end
 
   def daily_turnover

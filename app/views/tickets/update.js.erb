@@ -13,5 +13,5 @@ $('#closed-tickets').html('<%= daily_tickets("closed") %>');
 if ($('#delivery-button').find('input').attr('value') == "<%= t('delivery.home') %>") {
   $('#address-button').css({'visibility': 'hidden'});
 } else {
-  $('#address-button').css({'visibility': 'visible'});
+  $('#address-button').css({'visibility': 'visible'}).attr('ticket_id', '<%= @ticket.id %>');
 };
