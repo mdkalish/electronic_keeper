@@ -7,7 +7,10 @@ ticket_01:
   delivery_address: polna_5_ornontowice
   user: joanna_kalisz
   customer: Andrzej Nowak
-  status: open
+  status: underway
+  underwayed_at: <%= Time.now - 1800 %>
+  created_at: <%= Time.now + 1 %>
+  todays_nr: 1
 
 ticket_2:
   id: 2
@@ -18,7 +21,10 @@ ticket_2:
   delivery_address: zbozowa_7c_bujakow
   user: kasia_baluch
   customer: customer_2
-  status: open
+  underwayed_at: <%= Time.now - 3600 %>
+  status: underway
+  created_at: <%= Time.now + 2 %>
+  todays_nr: 2
 
 ticket_3:
   id: 3
@@ -29,4 +35,7 @@ ticket_3:
   delivery_address: generala_j_zietka_14_jaskowice
   user: bozena_wojnarowska
   customer: customer_3
-  status: open
+  underwayed_at: <%= Time.now - 7200 %>
+  status: underway
+  created_at: <%= Time.now + 3 %>
+  todays_nr: 3
