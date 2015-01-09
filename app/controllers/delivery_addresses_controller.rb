@@ -21,7 +21,7 @@ class DeliveryAddressesController < ApplicationController
   private
 
     def delivery_address_params
-      params.require(:delivery_address).permit(:city, :street, :house_number, :flat_number)
+      params.require(:delivery_address).permit(:name, :city, :street, :house_number, :flat_number)
     end
 
 end
