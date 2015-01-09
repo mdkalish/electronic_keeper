@@ -20,4 +20,8 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def close_all_tickets
+    current_user.tickets.update_all(status:"closed", closed_at: Time.now)
+  end
+
 end

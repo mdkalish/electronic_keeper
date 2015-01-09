@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   def destroy
     # binding.pry
     current_user.tickets.where(status:"open").destroy_all
-    current_user.tickets.update_all(status:"closed", closed_at: Time.now)
+    close_all_tickets
     session.destroy
     flash[:success] = t('flash.logged_out_successfully')
     redirect_to login_path
