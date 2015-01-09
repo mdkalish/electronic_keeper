@@ -1,8 +1,8 @@
 ticket_01:
   id: 1
-  total_price: 31.5
-  items_count: 3
-  alcohol: true
+  total_price: 0
+  items_count: 0
+  alcohol: false
   to_be_served_at: <%= 1.hour.from_now %>
   delivery_address: polna_5_ornontowice
   user: joanna_kalisz
@@ -14,9 +14,9 @@ ticket_01:
 
 ticket_2:
   id: 2
-  total_price: 66.6
-  items_count: 21
-  alcohol: true
+  total_price: 0
+  items_count: 0
+  alcohol: false
   to_be_served_at: <%= 2.hours.from_now %>
   delivery_address: zbozowa_7c_bujakow
   user: kasia_baluch
@@ -28,8 +28,8 @@ ticket_2:
 
 ticket_3:
   id: 3
-  total_price: 92.1
-  items_count: 2
+  total_price: 0
+  items_count: 0
   alcohol: false
   to_be_served_at: <%= 1.day.from_now %>
   delivery_address: generala_j_zietka_14_jaskowice
