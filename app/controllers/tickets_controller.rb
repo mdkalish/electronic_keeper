@@ -1,5 +1,5 @@
 class TicketsController < ApplicationController
-  before_filter :initialize_ticket
+  before_filter :initialize_ticket, except: :index
   skip_before_action :verify_authenticity_token
   # respond_to :json, :js, :html
 

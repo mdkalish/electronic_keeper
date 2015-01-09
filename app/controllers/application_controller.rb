@@ -7,11 +7,11 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def initialize_ticket
-    @ticket = current_user.tickets.find_by_id(session[:ticket_id])
+    # binding.pry
+    @ticket = current_user.tickets.find_by_id(session[:ticket_id] || params[:id])
     if @ticket.nil?
       @ticket = current_user.tickets.find_by_status("open") || current_user.tickets.create!
       session[:ticket_id] = @ticket.id
-      # binding.pry
       @ticket.update!(todays_nr: Ticket.how_many_today) if @ticket.todays_nr == nil
     end
   end
