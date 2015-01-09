@@ -6,7 +6,8 @@ module DeliveryAddressesHelper
     street = delivery_address.street.titleize
     house_nr = delivery_address.house_number
     flat_nr = delivery_address.flat_number
-    flat_nr.nil? ? "#{city}, #{street} #{house_nr}" : "#{city}, #{street} #{house_nr}/#{flat_nr}"
+    # binding.pry
+    flat_nr.empty? ? "#{city}, #{street} #{house_nr}" : "#{city}, #{street} #{house_nr}/#{flat_nr}"
   end
 
 end

@@ -42,7 +42,7 @@
             - if t.delivery && !t.delivery_address_id.nil?
               %td= style_delivery_address_for(t)
             - else
-              %td= t.delivery
+              %td= t.translate_delivery
             %td= t.items_count
             %td= t.total_price
           %tr.ticket-item

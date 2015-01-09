@@ -1,8 +1,8 @@
 polna_5_ornontowice:
   city: Ornontowice
   street: Polna
-  house_number: 5
-  flat_number:
+  house_number: "5"
+  flat_number: ""
   distance_by_car: 2200
   distance:
   longitude:
@@ -13,8 +13,8 @@ polna_5_ornontowice:
 zbozowa_7c_bujakow:
   city: Bujaków
   street: Zbożowa
-  house_number: 7C
-  flat_number: 4
+  house_number: "7C"
+  flat_number: "4"
   distance_by_car: 4300
   distance:
   longitude:
@@ -25,8 +25,8 @@ zbozowa_7c_bujakow:
 generala_j_zietka_14_jaskowice:
   city: Jaśkowice
   street: Generała J. Ziętka
-  house_number: 14
-  flat_number:
+  house_number: "14"
+  flat_number: ""
   distance_by_car: 2900
   distance:
   longitude:
