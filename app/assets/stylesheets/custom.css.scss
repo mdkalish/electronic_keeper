@@ -63,11 +63,11 @@ input {
   padding: 50px 0 50px 0;
 }
 #main {
-  margin-left: 10px;
+  margin: 0;
   position: relative;
   height: 100%;
   overflow-y: auto;
-  border: 0px solid grey;
+  border: 1px solid grey;
 }
 #sidebar-wrapper {
   height: 100%;

@@ -18,7 +18,12 @@ module ApplicationHelper
   end
 
   def button_label_for(product, price)
-    "#{product.name} #{convert_to_pln(price)}"
+    name = product.name
+    if name.length > 35
+      "#{name[0..30]}...: #{convert_to_pln(price)}"
+    else
+      "#{name}: #{convert_to_pln(price)}"
+    end
   end
 
   def current_ticket_summary(ticket)
