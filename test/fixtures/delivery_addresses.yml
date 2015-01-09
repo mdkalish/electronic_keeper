@@ -1,4 +1,5 @@
 polna_5_ornontowice:
+  name: ""
   city: Ornontowice
   street: Polna
   house_number: "5"
@@ -11,6 +12,7 @@ polna_5_ornontowice:
   updated_at: <%= Time.now.localtime %>
 
 zbozowa_7c_bujakow:
+  name: ""
   city: Bujaków
   street: Zbożowa
   house_number: "7C"
@@ -23,6 +25,7 @@ zbozowa_7c_bujakow:
   updated_at: <%= Time.now.localtime %>
 
 generala_j_zietka_14_jaskowice:
+  name: ""
   city: Jaśkowice
   street: Generała J. Ziętka
   house_number: "14"
