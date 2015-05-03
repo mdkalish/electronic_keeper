@@ -19,6 +19,6 @@
 
 // $(document).ready(function(){
 //   $('.button_to').closest('form').on('submit', function(){
-//     alert('chuj');
+//     alert('hello from application.js');
 //   });
 // });

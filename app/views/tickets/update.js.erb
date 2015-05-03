@@ -11,10 +11,10 @@ $('#closed-tickets').html('<%= daily_tickets("closed") %>');
 <% end %>
 
 
-if ($('#delivery-button').find('input').attr('value') == "<%= t('delivery.home') %>") {
-  $('#address-button').css({'visibility': 'hidden'});
-} else {
-  <% if params[:status] != "closed" %>
-  $('#address-button').css({'visibility': 'visible'}).attr('ticket_id', '<%= @ticket.id %>');
-  <% end %>
-};
+// if ($('#delivery-button').find('input').attr('value') == "<%= t('delivery.home') %>") {
+//   $('#address-button').css({'visibility': 'hidden'});
+// } else {
+//   <% if params[:status] != "closed" %>
+//   $('#address-button').css({'visibility': 'visible'}).attr('ticket_id', '<%= @ticket.id %>');
+//   <% end %>
+// };
